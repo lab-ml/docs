@@ -30,6 +30,7 @@ clean:
 rebuild: clean build
 
 pages: rebuild
-	cp -r $(BUILDDIR)/html/* ../$(PAGES_REPO)
+	@cd ../$(PAGES_REPO); git pull
+	@cp -r $(BUILDDIR)/html/* ../$(PAGES_REPO)
 
 .PHONY: build clean help
