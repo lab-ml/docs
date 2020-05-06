@@ -2,8 +2,19 @@ Installation & Setup
 ====================
 
 
+Installation from PyPI
+----------------------
+
+.. code-block:: bash
+
+    pip install machine_learning_lab
+
+
+Installation from source
+------------------------
+
 Lab
-----
+~~~
 
 
 **1. Clone and install**
@@ -33,7 +44,7 @@ You don't need the `.lab.yaml` file if you only plan on using the logger.
 
 
 Lab Dashboard
---------------
+~~~~~~~~~~~~~
 
 **1. Clone and install**
 
@@ -58,7 +69,8 @@ Lab Dashboard
   ./install.sh
 
 
-**3. Starting the server**
+Starting the server
+-------------------
 
 Navigate to the path of the project and run the following command to start the server.
 
