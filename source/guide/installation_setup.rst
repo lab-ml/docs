@@ -18,7 +18,6 @@ Lab
 
     You don't need the `.lab.yaml` file if you only plan on using the logger.
 
-
 Dashboard
 -------------
 
@@ -26,10 +25,8 @@ Dashboard
 
   pip install machine_learning_lab_dashboard
 
-
 Starting the server
-~~~~~~~~~~~~~~~~~~~
-
+-------------------
 
 Navigate to the path of the project and run the following command to start the server.
 
