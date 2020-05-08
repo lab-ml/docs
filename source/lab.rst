@@ -1,83 +1,92 @@
+.. image:: https://raw.githubusercontent.com/lab-ml/lab/master/images/lab_logo.png
+   :width: 150
+   :alt: Logo
+   :align: center
+
 Lab
-====
-
-This library helps you organize and track machine learning experiments.
+===
 
 
-Features
---------
-
-Main features of Lab are:
-
-* Organizing experiments
-* `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse experiments
-* Logger
-* Managing configurations and hyper-parameters
-
-Organizing Experiments
-----------------------
-
-Lab keeps track of all the model training statistics. It keeps them in a SQLite database and also pushes them to Tensorboard. It also organizes the checkpoints and any other artifacts you wish to save. All of these could be accessed with the Python API and also stored in a human friendly folder structure. This could be of your training pro Maintains logs, summaries and checkpoints of all the experiment runs in a folder structure.
+`💬 Slack workspace for discussions <https://join.slack.com/t/labforml/shared_invite/zt-cg5iui5u-4cJPT7DUwRGqup9z8RHwhQ/>`_
 
 
-`Dashboard <https://github.com/vpj/lab_dashboard/>`_ to Browse Experiments
---------------------------------------------------------------------------
+Lab is a library to improve your machine learning workflow and keep track of experiments.
 
-.. raw:: html
+.. about
 
-    <p align="center">
-      <img style="max-width:100%;"
-       src="https://raw.githubusercontent.com/vpj/lab/master/images/dashboard.png"
-       width="1024" title="Dashboard Screenshot">
-    </p>
+We developed lab to speed-up our own machine learning workflow.
+We kept it open source from the beginning.
+Lab is small library (~4,000 lines of code), so anyone can dig into its codebase.
+We make improvements to Lab based on our machine learning experience.
+We also have made a bunch of improvements based feedback from other users.
 
+.. who it is for
 
-The web dashboard helps navigate experiments and multiple runs. You can checkout the configs and a summary of performance. You can launch TensorBoard directly from there.
+Lab started as a project to help individuals with their machine learning experiments.
+It has come a long way since then, and from our experience,
+it can help small research groups too.
 
-`Eventually, we want to let you edit configs and run new experiments and analyze outputs on the dashboard.`
+.. state
 
+We use lab in every internal project.
+So, we have and will work on Lab actively.
+When improve Lab, we might have to make breaking changes to it.
+But, as the project is getting mature, breaking changes will be rare.
 
-Logger
-------
+Organize Experiments
+--------------------
 
-Logger has a simple API to produce pretty console outputs. It also comes with a bunch of helper functions that manages iterators and loops.
+Lab keeps track of every detail of the experiments:
+`source code <http://lab-ml.com/guide/experiment.html>`_,
+`configurations, hyper-parameters <http://lab-ml.com/guide/configs.html>`_,
+`checkpoints <http://lab-ml.com/guide/experiment.html>`_, 
+`Tensorboard logs and other statistics <http://lab-ml.com/guide/tracker.html>`_.
+Lab saves all these automatically in a clean folder structure.
 
-.. raw:: html
-
-    <p align="center">
-     <img style="max-width:100%"
-       src="https://raw.githubusercontent.com/vpj/lab/master/images/loop.gif"
-      />
-    </p>
-
-
-Manage configurations and hyper-parameters
-------------------------------------------
-
-You can setup configs/hyper-parameters with functions. `Lab <https://github.com/vpj/lab/>`_  would identify the dependencies and run them in topological order.
-
-.. code-block:: python
-
-  @Configs.calc()
-  def model(c: Configs):
-        return Net().to(c.device)
+.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/loop.gif
+   :width: 100%
+   :alt: Dashboard Screenshot
 
 
-You can setup multiple options for configuration functions. So you don't have to write a bunch if statements to handle configs.
+You can use `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse experiments.
 
-.. code-block:: python
-
-    @Configs.calc(Configs.optimizer)
-    def sgd(c: Configs):
-        return optim.SGD(c.model.parameters(), lr=c.learning_rate, momentum=c.momentum)
-
-    @Configs.calc(Configs.optimizer)
-    def adam(c: Configs):
-        return optim.Adam(c.model.parameters())
+.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/dashboard.png
+   :width: 100%
+   :alt: Dashboard Screenshot
 
 
-`Slack workspace for discussions <https://join.slack.com/t/labforml/shared_invite/zt-cg5iui5u-4cJPT7DUwRGqup9z8RHwhQ/>`_
-------------------------------------------------------------------------------------------------------------------------
+.. note::
 
-If you have any feature suggestions, report any bugs or check feature updates, We have created a slack space for Lab. Please use this `URL <https://join.slack.com/t/labforml/shared_invite/zt-cg5iui5u-4cJPT7DUwRGqup9z8RHwhQ/>`_ to login.
+  `Dashboard <https://github.com/vpj/lab_dashboard/>`_ is a new project.
+  With it, you can view experiments, launch TensorBoard, and delete unwanted experiments.
 
+  We want to let users edit hyper-parameters, run new experiments,
+  and do hyper-parameter searches from the dashboard.
+  We plan on showing basic visualizations on the dashboard. 
+  We are also playing around with using Jupyter Notebook for analytics.
+
+
+Write clean reusable code
+-------------------------
+
+Lab does most of the overhead work for you.
+So you have to write less code.
+Lab also includes utilities such as monitored sections,
+which lets you break code into sections and make it more readable.
+ 
+.. The API of lab uses type hints and it works well with IDEs.
+
+We introduced configurations module to lab recently.
+Configurations let you set hyper-parameters and other reusable modules.
+Using this, we were able to reuse a lot of code in internal machine learning projects.
+
+Configurations module help keep away from a range of common bad practices.
+`For example, passing around a large monolithic configuration object, and having a big class that does everything <https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/>`_.
+
+We have released some common configurable components such as 
+:class:`lab.helpers.training_loop.TrainingLoopConfigs`,
+:class:`lab.helpers.pytorch.train_valid.TrainValidConfigs`, and
+:class:`lab.helpers.pytorch.datasets.mnist.MNISTConfigs`.
+It is very easy to hack our components or write new reusable components.
+
+.. **Screenshot of a MNIST Sample**
