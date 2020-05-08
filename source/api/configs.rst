@@ -8,3 +8,5 @@ Configs
         .. automethod:: calc
 
         .. automethod:: set_hyperparams
+
+        .. automethod:: aggregate
