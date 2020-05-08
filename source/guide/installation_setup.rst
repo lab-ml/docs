@@ -4,33 +4,46 @@ Installation & Setup
 Lab
 ---
 
-.. code-block:: bash
+.. code-block:: console
 
     pip install machine_learning_lab
 
+``.lab.yaml``
+^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+	check_repo_dirty: true
+	data_path: 'data'
+	experiments_path: 'logs'
+	analytics_path: 'analytics'
+
+You need to create a ``.lab.yaml`` file at the root of your project.
+The values will default to above so an empty file should work for most of the use cases.
+
+	``check_repo_dirty``: If ``true``, before running an experiment it checks and aborts if there are any uncommitted changes
+
+	``data_path``: The location of data files.	this can be accessed via :func:`lab.get_data_path`.
+
+	``experiments_path``: This is where all the experiment details such as logs, configs and checkpoints are saved. This can be accessed via :func:`lab.get_experiments_path`.
+
+	``analytics_path``: ⚠️ This is where Jupyter Notebooks for custom analytics will be saved. This is still experimental.
+
 .. note::
 
-    **Create a .lab.yaml file**
-
-    An empty file at the root of the project should be enough. You can set project level configs for 'check_repo_dirty' and 'path' 'check_repo_dirty' and 'path'.
-
-    Lab will store all experiment data in folder `logs/` relative to `.lab.yaml` file. If `path` is set in `.lab.yaml` then it will be stored in `[path]logs/` relative to `.lab.yaml` file.
-
-    You don't need the `.lab.yaml` file if you only plan on using the logger.
+	You don't need the `.lab.yaml` file if you only the :mod:`lab.logger`.
 
 Dashboard
 -------------
 
-.. code-block:: bash
+.. code-block:: console
 
   pip install machine_learning_lab_dashboard
 
-Starting the server
--------------------
 
 Navigate to the path of the project and run the following command to start the server.
 
-.. code-block:: bash
+.. code-block:: console
 
   lab dashboard
 

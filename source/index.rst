@@ -25,6 +25,7 @@
    :maxdepth: 1
    :caption: Python API
 
+   api/lab
    api/configs
    api/experiment
    api/logger
