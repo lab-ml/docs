@@ -9,6 +9,9 @@ Lab
 
 `💬 Slack workspace for discussions <https://join.slack.com/t/labforml/shared_invite/zt-cg5iui5u-4cJPT7DUwRGqup9z8RHwhQ/>`_
 
+`📗 Documentation <http://lab-ml.com/>`_
+
+`📑 Articles & Tutorials <https://medium.com/@labml/>`_
 
 Lab is a library to improve your machine learning workflow and keep track of experiments.
 
@@ -43,20 +46,19 @@ Lab keeps track of every detail of the experiments:
 `Tensorboard logs and other statistics <http://lab-ml.com/guide/tracker.html>`_.
 Lab saves all these automatically in a clean folder structure.
 
-.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/loop.gif
+.. image: https://raw.githubusercontent.com/vpj/lab/master/images/loop.gif
    :width: 100%
-   :alt: Dashboard Screenshot
+   :alt: Logger output
 
 
 You can use `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse experiments.
 
-.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/dashboard.png
+.. image:: https://raw.githubusercontent.com/lab-ml/dashboard/master/images/screenshots/dashboard_table.png
    :width: 100%
    :alt: Dashboard Screenshot
 
 
-.. note::
-
+.. 📝 Note
   `Dashboard <https://github.com/vpj/lab_dashboard/>`_ is a new project.
   With it, you can view experiments, launch TensorBoard, and delete unwanted experiments.
 
@@ -66,8 +68,8 @@ You can use `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse exper
   We are also playing around with using Jupyter Notebook for analytics.
 
 
-Write clean reusable code
--------------------------
+Improve code quality
+--------------------
 
 Lab does most of the overhead work for you.
 So you have to write less code.
@@ -78,9 +80,10 @@ which lets you break code into sections and make it more readable.
 
 We introduced configurations module to lab recently.
 Configurations let you set hyper-parameters and other reusable modules.
-Using this, we were able to reuse a lot of code in internal machine learning projects.
+Using this API, we were able to reuse a lot of code in
+internal machine learning projects.
 
-Configurations module help keep away from a range of common bad practices.
+Configurations module helps to stay away from a range of common bad practices.
 `For example, passing around a large monolithic configuration object, and having a big class that does everything <https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/>`_.
 
 We have released some common configurable components such as 
@@ -89,4 +92,8 @@ We have released some common configurable components such as
 :class:`lab.helpers.pytorch.datasets.mnist.MNISTConfigs`.
 It is very easy to hack our components or write new reusable components.
 
-.. **Screenshot of a MNIST Sample**
+Here's how you can write a MNIST classifier with reusable components.
+
+.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/full@0.5x.png
+   :width: 100%
+   :alt: Code improvement

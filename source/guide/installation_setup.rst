@@ -8,8 +8,8 @@ Lab
 
     pip install machine_learning_lab
 
-``.lab.yaml``
-^^^^^^^^^^^^^
+Create ``.lab.yaml`` file
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -31,7 +31,7 @@ The values will default to above so an empty file should work for most of the us
 
 .. note::
 
-	You don't need the `.lab.yaml` file if you only the :mod:`lab.logger`.
+	You don't need the `.lab.yaml` file if you only use :mod:`lab.logger`.
 
 Dashboard
 -------------
