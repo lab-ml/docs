@@ -14,13 +14,6 @@
    guide/tracker
    guide/experiment
 
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Tutorials
-
-   guide/tutorial
-
 .. toctree::
    :maxdepth: 1
    :caption: Python API
@@ -35,5 +28,12 @@
    api/utils
    api/helpers
    api/analytics
+
+.. toctree::
+   :maxdepth: 1
+   :name: Tutorials
+   :caption: Tutorials
+
+   MNIST Tutorial with Lab : A Step-by-Step Guide <https://medium.com/@labml/mnist-tutorial-with-lab-a-step-by-step-guide-dbb48ffbd14e>
 
 
