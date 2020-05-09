@@ -3,8 +3,10 @@ Configs
 
 .. currentmodule:: lab.configs
 
-The configs will be stored and in future be adjusted from
-`Dashboard <https://github.com/vpj/lab_dashboard>`__
+The configurations provide an API to easily manage hyper-parameters and
+other configurable parameters of the experiments. The configuration of
+each experiment run are stored. These can be viewed on
+`Dashboard <https://github.com/vpj/lab_dashboard>`__.
 
 .. code-block:: python
 
@@ -14,7 +16,8 @@ The configs will be stored and in future be adjusted from
     from lab import tracker, monit, loop, experiment, logger
     from lab.configs import BaseConfigs
 
-Here is how you define a configurations class.
+Define a configuration class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -24,7 +27,8 @@ Here is how you define a configurations class.
     
         device: any
 
-Some configs can be calculated.
+Calculated configurations
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -41,11 +45,15 @@ Some configs can be calculated.
                            f"device count {torch.cuda.device_count()}", Text.warning)
                 return torch.device(f"cuda:{torch.cuda.device_count() - 1}")
 
+Inheriting and re-using configuration classes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Configs classes can be inherited. This lets you separate configs into
 modules instead of passing `monolithic config
-object <https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/>`__
-and it is quite neat when you want to inherit an entire experiment
-setups and make a few modifications.
+object <https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/>`__.
+
+You can even inherit a entire experiment setups and make a few
+modifications.
 
 .. code-block:: python
 
@@ -56,8 +64,11 @@ setups and make a few modifications.
             
         model: any = 'two_hidden_layer'
 
-You can specify multiple config calculator functions. The function given
-by the string for respective attribute will be picked.
+Defining configurations options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can specify multiple config calculator functions. You pick which one
+to use by its name.
 
 .. code-block:: python
 
@@ -71,7 +82,7 @@ by the string for respective attribute will be picked.
             x = F.relu(self.input_fc(x))
             return self.output_fc(x)
         
-    # This is just for illustration purposes, ideally you should have a configeration option
+    # This is just for illustration purposes, ideally you should have a configuration
     # for number of hidden layers.
     # A real world example would be different architectures, like a dense network vs a CNN
     class TwoHiddenLayerModule(nn.Module):
@@ -101,6 +112,9 @@ and not the whole config object. The library forces you to do that.
 However, you can directly set the model as an option, with ``__init__``
 accepting ``Configs`` as a parameter, it is not a usage pattern we
 encourage.
+
+Running the experiment
+^^^^^^^^^^^^^^^^^^^^^^
 
 Here’s how you run an experiment with the configurations.
 

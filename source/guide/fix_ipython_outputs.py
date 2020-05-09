@@ -62,7 +62,7 @@ def run():
     from lab.internal.lab import lab_singleton
 
     lab_singleton().set_path(__file__)
-    guide = Path(lab_singleton().path) / 'sphinx' / 'source' / 'guide'
+    guide = Path(lab_singleton().path) / 'source' / 'guide'
 
     fix_folder(guide)
 
