@@ -8,18 +8,18 @@ keep track of logs, code diffs, git commits, etc.
 
     from lab import experiment
 
-The ``name`` of the defaults to the calling python filename. However
-when invoking from a Jupyter Notebook it must be provided because the
-library cannot find the calling file name. ``comment`` can be changed
-later from the `Dashboard <https://github.com/vpj/lab_dashboard>`__.
+The ``name`` defaults to the calling python filename. However when
+invoking from a Jupyter Notebook it must be provided because the library
+cannot find the calling file name. ``comment`` can be changed later from
+`Dashboard <https://github.com/vpj/lab_dashboard>`__.
 
 .. code-block:: python
 
     experiment.create(name="mnist_pytorch",
                      comment="Test")
 
-Starting an experiments creates folders, stores the experiment meta
-data, git commits, and source diffs.
+Starting an experiments creates folders, stores the experiment
+configurations, git commits, and source diffs.
 
 .. code-block:: python
 
