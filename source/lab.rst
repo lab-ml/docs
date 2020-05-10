@@ -99,3 +99,17 @@ Here's how you can write a MNIST classifier with reusable components.
 .. image:: https://raw.githubusercontent.com/vpj/lab/master/images/full@0.5x.png
    :width: 100%
    :alt: Code improvement
+
+Citing Lab
+----------
+
+If you use Lab for academic research, please cite the library using the following BibTeX entry.
+
+.. code-block:: bibtex
+
+	@misc{lab,
+	 author = {Varuna Jayasiri, Nipun Wijerathne},
+	 title = {Lab: A library to organize machine learning experiments},
+	 year = {2020},
+	 url = {https://lab-ml.com/},
+	}
