@@ -113,3 +113,7 @@ If you use Lab for academic research, please cite the library using the followin
 	 year = {2020},
 	 url = {https://lab-ml.com/},
 	}
+
+.. raw:: html
+
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9gTUCaTHephdB-djQvFcb2qYxk3ZYQ097Ly_F6sTLW7tzFg/viewform?embedded=true" width="640" height="542" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
