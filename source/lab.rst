@@ -53,7 +53,7 @@ Lab saves all these automatically in a clean folder structure.
    :alt: Logger output
 
 
-You can use `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse experiments.
+You can use `Dashboard <https://github.com/lab-ml/dashboard/>`_ to browse experiments.
 
 .. image:: https://raw.githubusercontent.com/lab-ml/dashboard/master/images/screenshots/dashboard_table.png
    :width: 100%
@@ -61,7 +61,7 @@ You can use `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse exper
 
 
 .. 📝 Note
-  `Dashboard <https://github.com/vpj/lab_dashboard/>`_ is a new project.
+  `Dashboard <https://https://github.com/lab-ml/dashboard/>`_ is a new project.
   With it, you can view experiments, launch TensorBoard, and delete unwanted experiments.
 
   We want to let users edit hyper-parameters, run new experiments,

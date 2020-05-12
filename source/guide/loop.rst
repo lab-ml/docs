@@ -1,18 +1,19 @@
+
 Loop
 ====
 
-.. currentmodule:: lab.loop
+.. currentmodule:: labml.loop
 
 This can be used for the training loop. The :func:`loop` keeps track
 of the time taken and time remaining for the loop. You can use
 :ref:`guide_monitor` within loop.
 
-:func:`lab.tracker.save` outputs the current status along with global
-step.
+:func:`labml.tracker.save` outputs the current status along with
+global step.
 
 .. code-block:: python
 
-    from lab import loop, tracker
+    from labml import loop, tracker
 
 .. code-block:: python
 
@@ -32,14 +33,14 @@ we will reset it.
 
 .. code-block:: python
 
-    loop.set_global_step(0)
+    tracker.set_global_step(0)
 
 You can manually increment global step too.
 
 .. code-block:: python
 
     for step in loop.loop(range(0, 400)):
-        loop.add_global_step(5)
+        tracker.add_global_step(5)
         tracker.save()
 
 

@@ -1,20 +1,21 @@
+
 Configs
 =======
 
-.. currentmodule:: lab.configs
+.. currentmodule:: labml.configs
 
 The configurations provide an API to easily manage hyper-parameters and
 other configurable parameters of the experiments. The configuration of
 each experiment run are stored. These can be viewed on
-`Dashboard <https://github.com/vpj/lab_dashboard>`__.
+`Dashboard <https://github.com/vpj/labmlml_dashboard>`__.
 
 .. code-block:: python
 
     import torch
     from torch import nn
     
-    from lab import tracker, monit, loop, experiment, logger
-    from lab.configs import BaseConfigs
+    from labml import tracker, monit, loop, experiment, logger
+    from labml.configs import BaseConfigs
 
 Define a configuration class
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -144,10 +145,8 @@ Here’s how you run an experiment with the configurations.
 .. raw:: html
 
     <pre>
-    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">6233df648dc511eaa65eacde48001122</span>
-    	[dirty]: <strong><span style="color: #DDB62B">"Merge pull request #33 from lab-ml/tutorial</span></strong>
-    <strong><span style="color: #DDB62B"></span></strong>
-    <strong><span style="color: #DDB62B">Just changed as for the new API"</span></strong>
+    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">20ced7ee946011eab224acde48001122</span>
+    	[dirty]: <strong><span style="color: #DDB62B">"citation"</span></strong>
     <span style="text-decoration: underline">Configs:</span>
     	<span style="color: #60C6C8">cuda_device</span><span style="color: #C5C1B4"> = </span><strong>0</strong>	
     	<span style="color: #60C6C8">device</span><span style="color: #C5C1B4"> = </span><strong>cpu</strong>	<span style="color: #C5C1B4">cuda</span>
@@ -157,4 +156,5 @@ Here’s how you run an experiment with the configurations.
     	<span style="color: #60C6C8">output_size</span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
     	<span style="color: #60C6C8">use_cuda</span><span style="color: #C5C1B4"> = </span><strong>True</strong>	
     </pre>
+
 

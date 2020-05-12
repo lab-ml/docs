@@ -1,12 +1,13 @@
+
 Logger
 ======
 
-.. currentmodule:: lab.logger
+.. currentmodule:: labml.logger
 
 .. code-block:: python
 
-    from lab import logger
-    from lab.logger import Text, Color
+    from labml import logger
+    from labml.logger import Text, Color
 
 You can log to the screen with :func:`log`.
 
@@ -100,4 +101,5 @@ You can pretty print python objects with :meth:`info`.
     <pre><span style="color: #60C6C8"> name: </span><strong>Name</strong>
     <span style="color: #60C6C8">price: </span><strong>22</strong>
     Total <span style="color: #208FFB">2</span> item(s)</pre>
+
 

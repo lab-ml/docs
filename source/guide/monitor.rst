@@ -1,9 +1,10 @@
-.. _guide_monitor:
+
+``.. _guide_monitor:``
 
 Monitor
 =======
 
-.. currentmodule:: lab.monit
+.. currentmodule:: labml.monit
 
 Iterators & Enumerators
 -----------------------
@@ -19,8 +20,7 @@ object. In this example we use a PyTorch ``DataLoader``.
     import torch
     from torchvision import datasets, transforms
     
-    import lab
-    from lab import logger, monit
+    from labml import logger, monit, lab
     
     test_loader = torch.utils.data.DataLoader(
             datasets.MNIST(lab.get_data_path(),
@@ -41,7 +41,7 @@ object. In this example we use a PyTorch ``DataLoader``.
 
 .. raw:: html
 
-    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,806.34ms</span>
+    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,670.82ms</span>
     </pre>
 
 
@@ -54,7 +54,7 @@ object. In this example we use a PyTorch ``DataLoader``.
 
 .. raw:: html
 
-    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,847.01ms</span>
+    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,698.60ms</span>
     </pre>
 
 
@@ -74,7 +74,7 @@ keep the code clean by separating different blocks of code.
 
 .. raw:: html
 
-    <pre>Load data<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	2,003.64ms</span>
+    <pre>Load data<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	2,003.36ms</span>
     </pre>
 
 
@@ -88,7 +88,7 @@ keep the code clean by separating different blocks of code.
 
 .. raw:: html
 
-    <pre>Load saved model<span style="color: #E75C58">...[FAIL]</span><span style="color: #208FFB">	1,006.66ms</span>
+    <pre>Load saved model<span style="color: #E75C58">...[FAIL]</span><span style="color: #208FFB">	1,007.45ms</span>
     </pre>
 
 
@@ -100,4 +100,13 @@ You can also show progress while a section is running
         for i in range(100):
             time.sleep(0.1)
             # Multiple training steps in the inner loop
-            logger.progress(i)
+            monit.progress(i)
+
+
+
+.. raw:: html
+
+    <pre>Train<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	10,508.56ms</span>
+    </pre>
+
+

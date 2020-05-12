@@ -1,7 +1,7 @@
 Logger
 ======
 
-.. automodule:: lab.logger
+.. automodule:: labml.logger
 
     .. autofunction:: log
 

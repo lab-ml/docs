@@ -1,8 +1,8 @@
 import re
 from pathlib import Path
 
-from lab import logger, monit
-from lab.logger import Text
+from labml import logger, monit
+from labml.logger import Text
 
 
 def fix_file(path: Path):
@@ -59,7 +59,7 @@ def fix_folder(path: Path):
 
 
 def run():
-    from lab.internal.lab import lab_singleton
+    from labml.internal.lab import lab_singleton
 
     lab_singleton().set_path(__file__)
     guide = Path(lab_singleton().path) / 'source' / 'guide'

@@ -1,13 +1,7 @@
 Loop
 =====
 
-.. automodule:: lab.loop
-
-     .. autofunction:: set_global_step
-
-     .. autofunction:: add_global_step
-
-     .. autofunction:: get_global_step
+.. automodule:: labml.loop
 
      .. autofunction:: loop
 

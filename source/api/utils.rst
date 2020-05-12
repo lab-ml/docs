@@ -1,7 +1,7 @@
 Utils
 =========
 
-.. automodule:: lab.utils.pytorch
+.. automodule:: labml.utils.pytorch
 
     .. autofunction:: add_model_indicators
 
@@ -10,6 +10,6 @@ Utils
     .. autofunction:: get_modules
 
 
-.. automodule:: lab.utils.data.pytorch
+.. automodule:: labml.utils.data.pytorch
 
     .. autoclass:: CsvDataset

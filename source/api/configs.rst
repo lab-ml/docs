@@ -1,7 +1,7 @@
 Configs
 ==========
 
-.. automodule:: lab.configs
+.. automodule:: labml.configs
 
     .. autoclass:: BaseConfigs
 

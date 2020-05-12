@@ -1,3 +1,4 @@
+
 Tracker
 =======
 
@@ -11,23 +12,23 @@ histograms.
     
     import numpy as np
     
-    from lab import loop, tracker, logger
+    from labml import loop, tracker, logger
     
     # dummy train function
     def train():
         return np.random.randint(100)
     
     # Reset global step because we incremented in previous loop
-    loop.set_global_step(0)
+    tracker.set_global_step(0)
 
 This stores all the loss values and writes the logs the mean on every
 tenth iteration. Console output line is replaced until
-:func:`lab.logger.log` is called.
+:func:`labmlml.logger.log` is called.
 
 .. code-block:: python
 
     for i in range(1, 401):
-        loop.add_global_step()
+        tracker.add_global_step()
         loss = train()
         tracker.add(loss=loss)
         if i % 10 == 0:
@@ -56,7 +57,7 @@ Indicator settings
         return idx, 10, np.random.randint(100)
     
     # Reset global step because we incremented in previous loop
-    loop.set_global_step(0)
+    tracker.set_global_step(0)
 
 Histogram indicators will log a histogram of data. Queue will store data
 in a ``deque`` of size ``queue_size``, and log histograms. Both of these
@@ -86,7 +87,7 @@ to console
 .. code-block:: python
 
     for i in range(1, 400):
-        loop.add_global_step()
+        tracker.add_global_step()
         reward, policy, value = train2(i)
         tracker.add(reward=reward, policy=policy, value=value, loss=1.)
         if i % 10 == 0:
@@ -101,6 +102,6 @@ to console
     <pre>
     
     
-    <strong><span style="color: #DDB62B">     390:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 385.500</strong> value: <strong> 56.6000</strong></pre>
+    <strong><span style="color: #DDB62B">     390:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 385.500</strong> value: <strong> 46.6000</strong></pre>
 
 

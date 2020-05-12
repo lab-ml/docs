@@ -1,7 +1,7 @@
 Helpers
 =========
 
-.. automodule:: lab.helpers.training_loop
+.. automodule:: labml.helpers.training_loop
 
     .. autoclass:: TrainingLoopConfigs
 
@@ -9,25 +9,25 @@ Helpers
 PyTorch
 -------
 
-.. automodule:: lab.helpers.pytorch.device
+.. automodule:: labml.helpers.pytorch.device
 
     .. autoclass:: DeviceConfigs
 
-.. automodule:: lab.helpers.pytorch.seed
+.. automodule:: labml.helpers.pytorch.seed
 
     .. autoclass:: SeedConfigs
 
-.. automodule:: lab.helpers.pytorch.train_valid
+.. automodule:: labml.helpers.pytorch.train_valid
 
     .. autoclass:: TrainValidConfigs
 
 PyTorch Datasets
 ^^^^^^^^^^^^^^^^
 
-.. automodule:: lab.helpers.pytorch.datasets.mnist
+.. automodule:: labml.helpers.pytorch.datasets.mnist
 
     .. autoclass:: MNISTConfigs
 
-.. automodule:: lab.helpers.pytorch.datasets.cifar10
+.. automodule:: labml.helpers.pytorch.datasets.cifar10
 
     .. autoclass:: CIFAR10Configs

@@ -1,7 +1,7 @@
 Experiment
 ==========
 
-.. automodule:: lab.experiment
+.. automodule:: labml.experiment
 
      .. autofunction:: create
 

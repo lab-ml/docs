@@ -1,7 +1,12 @@
 Tracker
 =======
 
-.. automodule:: lab.tracker
+.. automodule:: labml.tracker
+     .. autofunction:: set_global_step
+
+     .. autofunction:: add_global_step
+
+     .. autofunction:: get_global_step
 
      .. autofunction:: set_queue
 
@@ -13,9 +18,9 @@ Tracker
 
      .. warning::
 
-         :func:`lab.tracker.set_image`,
-         :func:`lab.tracker.set_text`, and
-         :func:`lab.tracker.set_indexed_text` are still experimental.
+         :func:`labml.tracker.set_image`,
+         :func:`labml.tracker.set_text`, and
+         :func:`labml.tracker.set_indexed_text` are still experimental.
 
      .. autofunction:: set_image
 

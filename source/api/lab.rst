@@ -1,7 +1,7 @@
 Lab
 ===
 
-.. automodule:: lab
+.. automodule:: labml.lab
 
     .. autofunction:: get_data_path
 

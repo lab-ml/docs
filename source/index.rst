@@ -1,4 +1,4 @@
-:github_url: https://github.com/lab-ml/lab
+:github_url: https://github.com/lab-ml/labml
 
 .. include:: lab.rst
 

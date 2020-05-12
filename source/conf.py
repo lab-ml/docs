@@ -16,7 +16,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Lab'
+project = 'LabML'
 copyright = '2020, Lab contributors'
 author = 'Lab contributors'
 

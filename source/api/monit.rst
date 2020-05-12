@@ -2,7 +2,7 @@ Monitor
 =======
 
 
-.. automodule:: lab.monit
+.. automodule:: labml.monit
 
      .. autofunction:: iterate
 
