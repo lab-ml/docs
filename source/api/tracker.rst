@@ -2,11 +2,7 @@ Tracker
 =======
 
 .. automodule:: labml.tracker
-     .. autofunction:: set_global_step
 
-     .. autofunction:: add_global_step
-
-     .. autofunction:: get_global_step
 
      .. autofunction:: set_queue
 
@@ -31,4 +27,12 @@ Tracker
 
      .. autofunction:: add
 
-     .. autofunction:: save
+     .. autofunction:: namespace
+
+     .. autofunction:: reset
+
+     .. autofunction:: set_global_step
+
+     .. autofunction:: add_global_step
+
+     .. autofunction:: get_global_step
