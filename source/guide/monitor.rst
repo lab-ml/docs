@@ -1,6 +1,3 @@
-
-``.. _guide_monitor:``
-
 Monitor
 =======
 
