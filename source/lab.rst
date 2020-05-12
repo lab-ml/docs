@@ -1,4 +1,4 @@
-.. image:: https://raw.githubusercontent.com/lab-ml/lab/master/images/lab_logo.png
+.. image:: https://raw.githubusercontent.com/lab-ml/labml/master/images/lab_logo.png
    :width: 150
    :alt: Logo
    :align: center
@@ -89,9 +89,9 @@ Configurations module helps to stay away from a range of common bad practices.
 `For example, passing around a large monolithic configuration object, and having a big class that does everything <https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/>`_.
 
 We have released some common configurable components such as 
-:class:`lab.helpers.training_loop.TrainingLoopConfigs`,
-:class:`lab.helpers.pytorch.train_valid.TrainValidConfigs`, and
-:class:`lab.helpers.pytorch.datasets.mnist.MNISTConfigs`.
+:class:`labml.helpers.training_loop.TrainingLoopConfigs`,
+:class:`labml.helpers.pytorch.train_valid.TrainValidConfigs`, and
+:class:`labml.helpers.pytorch.datasets.mnist.MNISTConfigs`.
 It is very easy to hack our components or write new reusable components.
 
 Here's how you can write a MNIST classifier with reusable components.
