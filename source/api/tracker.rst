@@ -27,6 +27,8 @@ Tracker
 
      .. autofunction:: add
 
+     .. autofunction:: save
+
      .. autofunction:: namespace
 
      .. autofunction:: reset
