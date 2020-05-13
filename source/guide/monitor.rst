@@ -1,4 +1,5 @@
-.. _guide_monitor:
+
+``.. _guide_monitor:``
 
 Monitor
 =======
@@ -19,7 +20,7 @@ object. In this example we use a PyTorch ``DataLoader``.
     import torch
     from torchvision import datasets, transforms
     
-    from labml import logger, monit, lab
+    from labml import logger, monit, lab, tracker
     
     test_loader = torch.utils.data.DataLoader(
             datasets.MNIST(lab.get_data_path(),
@@ -107,5 +108,45 @@ You can also show progress while a section is running
 
     <pre>Train<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	10,508.56ms</span>
     </pre>
+
+
+Loop
+----
+
+This can be used for the training loop. The :func:`loop` keeps track of
+the time taken and time remaining for the loop.
+
+:func:`labml.tracker.save` outputs the current status along with global
+step.
+
+.. code-block:: python
+
+    for step in monit.loop(range(0, 400)):
+        tracker.save()
+
+
+
+.. raw:: html
+
+    <pre><strong><span style="color: #DDB62B">     399:  </span></strong>  <span style="color: #208FFB">2ms</span><span style="color: #D160C4">  0:00m/  0:00m  </span></pre>
+
+
+.. code-block:: python
+
+    tracker.set_global_step(0)
+
+You can manually increment global step too.
+
+.. code-block:: python
+
+    for step in monit.loop(range(0, 400)):
+        tracker.add_global_step(5)
+        tracker.save()
+
+
+
+.. raw:: html
+
+    <pre><strong><span style="color: #DDB62B">   2,000:  </span></strong>  <span style="color: #208FFB">2ms</span><span style="color: #D160C4">  0:00m/  0:00m  </span></pre>
 
 

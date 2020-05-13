@@ -10,7 +10,6 @@
    guide/logger
    guide/monitor
    guide/configs
-   guide/loop
    guide/tracker
    guide/experiment
 
@@ -24,7 +23,6 @@
    api/logger
    api/monit
    api/tracker
-   api/loop
    api/utils
    api/helpers
    api/analytics

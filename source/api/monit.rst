@@ -13,3 +13,7 @@ Monitor
      .. autofunction:: progress
 
      .. autofunction:: fail
+
+     .. autofunction:: loop
+
+     .. autofunction:: finish_loop
