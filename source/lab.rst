@@ -107,7 +107,7 @@ If you use Lab for academic research, please cite the library using the followin
 
 .. code-block:: bibtex
 
-	@misc{lab,
+	@misc{labML,
 	 author = {Varuna Jayasiri, Nipun Wijerathne},
 	 title = {Lab: A library to organize machine learning experiments},
 	 year = {2020},

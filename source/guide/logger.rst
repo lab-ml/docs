@@ -76,7 +76,7 @@ Or, specify colors
 Logging debug info
 ------------------
 
-You can pretty print python objects with :meth:`info`.
+You can pretty print python objects with :func:`inspect`.
 
 .. code-block:: python
 

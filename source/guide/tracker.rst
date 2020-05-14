@@ -23,7 +23,7 @@ histograms.
 
 This stores all the loss values and writes the logs the mean on every
 tenth iteration. Console output line is replaced until
-:func:`labmlml.logger.log` is called.
+:py:func:`labml.logger.log` is called.
 
 .. code-block:: python
 
