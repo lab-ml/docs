@@ -13,6 +13,6 @@ Analytics
 
     .. autofunction:: get_data
 
-    .. autofunction:: render_altair
+    .. autofunction:: distribution
 
-    .. autofunction:: render_matplotlib
+    .. autofunction:: scatter
