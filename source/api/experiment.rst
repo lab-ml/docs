@@ -5,6 +5,8 @@ Experiment
 
      .. autofunction:: create
 
+     .. autofunction:: get_uuid
+
      .. autofunction:: add_pytorch_models
 
      .. autofunction:: add_sklearn_models

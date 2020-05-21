@@ -16,3 +16,5 @@ Analytics
     .. autofunction:: distribution
 
     .. autofunction:: scatter
+
+    .. autoclass:: IndicatorCollection

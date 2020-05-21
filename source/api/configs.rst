@@ -10,3 +10,5 @@ Configs
         .. automethod:: set_hyperparams
 
         .. automethod:: aggregate
+
+    .. autofunction:: option
