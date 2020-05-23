@@ -5,14 +5,16 @@ Analytics
 
     This is still experimental and the api will change frequently.
 
-.. automodule:: labml.internal.analytics
+.. automodule:: labml.analytics
 
-    .. autoclass:: Analyzer
+    .. autofunction:: runs
 
-        .. automethod:: get_indicators
+    .. autofunction:: set_preferred_db
 
-.. automodule:: labml.internal.analytics.altair.tb
+    .. autofunction:: get_data
 
-    .. autoclass:: AltairTensorBoardAnalytics
+    .. autofunction:: distribution
 
-        .. automethod:: render_scalar
+    .. autofunction:: scatter
+
+    .. autoclass:: IndicatorCollection
