@@ -45,6 +45,6 @@ Navigate to the path of the project and run the following command to start the s
 
 .. code-block:: console
 
-  lab dashboard
+  labml dashboard
 
 
