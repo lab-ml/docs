@@ -1,4 +1,3 @@
-
 Configs
 =======
 
@@ -14,8 +13,8 @@ each experiment run are stored. These can be viewed on
     import torch
     from torch import nn
     
-    from labml import tracker, monit, loop, experiment, logger
-    from labml.configs import BaseConfigs
+    from labml import tracker, monit, experiment, logger
+    from labml.configs import BaseConfigs, option, calculate, hyperparams, aggregate
 
 Define a configuration class
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,7 +32,7 @@ Calculated configurations
 
 .. code-block:: python
 
-    @DeviceConfigs.calc(DeviceConfigs.device)
+    @option(DeviceConfigs.device)
     def cuda(c: DeviceConfigs):
         is_cuda = c.use_cuda and torch.cuda.is_available()
         if not is_cuda:
@@ -64,6 +63,10 @@ modifications.
         output_size: int = 10
             
         model: any = 'two_hidden_layer'
+        epochs = 10
+        steps_per_epcoch = 1024
+        total_steps: int
+        variant: str
 
 Defining configurations options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -99,11 +102,11 @@ to use by its name.
             return self.output_fc(x)
     
     
-    @Configs.calc(Configs.model)
+    @option(Configs.model)
     def one_hidden_layer(c: Configs):
         return OneHiddenLayerModule(c.input_size, c.model_size, c.output_size)
     
-    @Configs.calc(Configs.model)
+    @option(Configs.model)
     def two_hidden_layer(c: Configs):
         return TwoHiddenLayerModule(c.input_size, c.model_size, c.output_size)
 
@@ -114,6 +117,46 @@ However, you can directly set the model as an option, with ``__init__``
 accepting ``Configs`` as a parameter, it is not a usage pattern we
 encourage.
 
+Calculating with predefined functions of lambdas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can also compute configs with ``lambda`` functions or predefined
+functions
+
+.. code-block:: python
+
+    _ = calculate(Configs.total_steps, [Configs.epochs, Configs.steps_per_epcoch], lambda e, s: e * s)
+
+Aggregates
+^^^^^^^^^^
+
+You can use aggregates to setup configs that depend on each other. For
+example, this is useful when you have LSTM based model and a CNN based
+model, and different data loaders for each architecture.
+
+Here we use ``variant`` to set both ``model`` and number of epochs.
+
+.. code-block:: python
+
+    aggregate(Configs.variant, 'small', (Configs.model, 'one_hidden_layer'), (Configs.epochs, 10))
+    aggregate(Configs.variant, 'large', (Configs.model, 'two_hidden_layer'), (Configs.epochs, 100))
+
+Hyper-parameters
+^^^^^^^^^^^^^^^^
+
+LabML will identify any parameter you explicily specify outside the
+declaration of the class as hyper-parameters (in this case ``variant``
+because we set it with ``conf.variant = 'large'``. You can also specify
+hyper-parameters manually.
+
+The hyper-parameters will be highlighted among other configs in logs and
+in dashboard. These will also be logged in to Tensorboard.
+
+.. code-block:: python
+
+    hyperparams(Configs.epochs)
+    hyperparams(Configs.total_steps, is_hyperparam=False)
+
 Running the experiment
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -122,7 +165,7 @@ Here’s how you run an experiment with the configurations.
 .. code-block:: python
 
     conf = Configs()
-    conf.model = 'one_hidden_layer'
+    conf.variant = 'large'
     experiment.create(name='test_configs')
     experiment.calculate_configs(conf)
     logger.inspect(model=conf.model)
@@ -132,7 +175,8 @@ Here’s how you run an experiment with the configurations.
 .. raw:: html
 
     <pre>
-    <span style="color: #60C6C8">model: </span><strong>OneHiddenLayerModule(</strong>
+    
+    <span style="color: #60C6C8">model: </span><strong>TwoHiddenLayerModule(</strong>
     <strong>  (input_fc): Linear(in_features=10, out_features=1024, bi ...</strong></pre>
 
 
@@ -145,16 +189,19 @@ Here’s how you run an experiment with the configurations.
 .. raw:: html
 
     <pre>
-    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">20ced7ee946011eab224acde48001122</span>
-    	[dirty]: <strong><span style="color: #DDB62B">"citation"</span></strong>
+    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">cacb5574a17b11eaa8eef218981c2492</span>
+    	[dirty]: <strong><span style="color: #DDB62B">"front page"</span></strong>
     <span style="text-decoration: underline">Configs:</span>
     	<span style="color: #60C6C8">cuda_device</span><span style="color: #C5C1B4"> = </span><strong>0</strong>	
     	<span style="color: #60C6C8">device</span><span style="color: #C5C1B4"> = </span><strong>cpu</strong>	<span style="color: #C5C1B4">cuda</span>
+    	<span style="color: #60C6C8"><strong><span style="color: #DDB62B">epochs</span></strong></span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
     	<span style="color: #60C6C8">input_size</span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
-    	<span style="color: #60C6C8"><strong><span style="color: #DDB62B">model</span></strong></span><span style="color: #C5C1B4"> = </span><strong>OneHiddenLayerModule(  (input_fc): Linea...</strong>	one_hidden_layer<span style="color: #C5C1B4">	[</span>two_hidden_layer<span style="color: #C5C1B4">]</span>
+    	<span style="color: #60C6C8">model</span><span style="color: #C5C1B4"> = </span><strong>TwoHiddenLayerModule(  (input_fc): Linea...</strong>	two_hidden_layer<span style="color: #C5C1B4">	[</span>one_hidden_layer<span style="color: #C5C1B4">]</span>
     	<span style="color: #60C6C8">model_size</span><span style="color: #C5C1B4"> = </span><strong>1024</strong>	
     	<span style="color: #60C6C8">output_size</span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
+    	<span style="color: #60C6C8">steps_per_epcoch</span><span style="color: #C5C1B4"> = </span><strong>1024</strong>	
+    	<span style="color: #60C6C8">total_steps</span><span style="color: #C5C1B4"> = </span><strong>10240</strong>	<span style="color: #C5C1B4"><lambda></span>
     	<span style="color: #60C6C8">use_cuda</span><span style="color: #C5C1B4"> = </span><strong>True</strong>	
+    	<span style="color: #60C6C8"><strong><span style="color: #DDB62B">variant</span></strong></span><span style="color: #C5C1B4"> = </span><strong>large</strong>	
     </pre>
-
 
