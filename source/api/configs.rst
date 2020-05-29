@@ -5,10 +5,10 @@ Configs
 
     .. autoclass:: BaseConfigs
 
-        .. automethod:: calc
-
-        .. automethod:: set_hyperparams
-
-        .. automethod:: aggregate
-
     .. autofunction:: option
+
+    .. autofunction:: calculate
+
+    .. autofunction:: hyperparams
+
+    .. autofunction:: aggregate
