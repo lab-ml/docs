@@ -9,12 +9,18 @@ Analytics
 
     .. autofunction:: runs
 
-    .. autofunction:: set_preferred_db
+    .. autofunction:: get_run
 
-    .. autofunction:: get_data
+    .. autofunction:: set_preferred_db
 
     .. autofunction:: distribution
 
     .. autofunction:: scatter
+
+    .. autofunction:: binned_heatmap
+
+    .. autofunction:: indicator_data
+
+    .. autofunction:: artifact_data
 
     .. autoclass:: IndicatorCollection
