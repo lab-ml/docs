@@ -1,4 +1,3 @@
-
 Logger
 ======
 
@@ -76,7 +75,7 @@ Or, specify colors
 Logging debug info
 ------------------
 
-You can pretty print python objects with :func:`inspect`.
+You can pretty print python objects with :meth:`inspect`.
 
 .. code-block:: python
 
@@ -98,8 +97,54 @@ You can pretty print python objects with :func:`inspect`.
 
 .. raw:: html
 
-    <pre><span style="color: #60C6C8"> name: </span><strong>Name</strong>
+    <pre><span style="color: #60C6C8"> name: </span><span style="color: #C5C1B4">"</span><strong>Name</strong><span style="color: #C5C1B4">"</span>
     <span style="color: #60C6C8">price: </span><strong>22</strong>
     Total <span style="color: #208FFB">2</span> item(s)</pre>
+
+
+Log PyTorch tensors and NumPy arrays
+
+.. code-block:: python
+
+    import torch
+    
+    torch_tensor = torch.arange(0, 100).view(10, 10)
+    logger.inspect(torch_tensor)
+
+
+
+.. raw:: html
+
+    <pre><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">torch.int64</span>
+    <span style="color: #C5C1B4">shape: </span><strong>[10, 10]</strong>
+    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB">49.5</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB">29.011491775512695</span>
+    <strong></strong><span style="color: #C5C1B4">[</span><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>0</strong><strong>, </strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>1</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>1</strong><strong>, </strong><strong>1</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>1</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>2</strong><strong>0</strong><strong>, </strong><strong>2</strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>2</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>9</strong><strong>0</strong><strong>, </strong><strong>9</strong><strong>1</strong><strong>, </strong><strong>9</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
+    <strong></strong><strong></strong><span style="color: #C5C1B4">]</span></pre>
+
+
+.. code-block:: python
+
+    numpy_array = torch_tensor.numpy()
+    logger.inspect(numpy_array)
+
+
+
+.. raw:: html
+
+    <pre><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">int64</span>
+    <span style="color: #C5C1B4">shape: </span><strong>[10, 10]</strong>
+    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB">49.5</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB">28.86607004772212</span>
+    <strong></strong><span style="color: #C5C1B4">[</span><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>0</strong><strong>, </strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>1</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>1</strong><strong>, </strong><strong>1</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>1</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>2</strong><strong>0</strong><strong>, </strong><strong>2</strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>2</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>9</strong><strong>0</strong><strong>, </strong><strong>9</strong><strong>1</strong><strong>, </strong><strong>9</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
+    <strong></strong><strong></strong><span style="color: #C5C1B4">]</span></pre>
 
 
