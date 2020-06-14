@@ -1,0 +1,25 @@
+valid.output:
+  class_name: Tensor
+  is_once: false
+  is_print: false
+  name: valid.output
+valid.ref:
+  class_name: Tensor
+  is_once: true
+  is_print: false
+  name: valid.ref
+valid.strike_high:
+  class_name: Tensor
+  is_once: true
+  is_print: false
+  name: valid.strike_high
+valid.strike_low:
+  class_name: Tensor
+  is_once: true
+  is_print: false
+  name: valid.strike_low
+valid.target:
+  class_name: Tensor
+  is_once: true
+  is_print: false
+  name: valid.target
