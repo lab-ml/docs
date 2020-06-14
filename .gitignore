@@ -5,5 +5,5 @@ __pycache__
 .DS_Store
 .*.swp
 *.egg-info/
-/logs
+/logs/*
 !/logs/analytics
