@@ -1,10 +1,6 @@
 Analytics
 =========
 
-.. warning::
-
-    This is still experimental and the api will change frequently.
-
 .. automodule:: labml.analytics
 
     .. autofunction:: runs

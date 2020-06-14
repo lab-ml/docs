@@ -12,6 +12,7 @@
    guide/configs
    guide/tracker
    guide/experiment
+   guide/analytics
 
 .. toctree::
    :maxdepth: 1
