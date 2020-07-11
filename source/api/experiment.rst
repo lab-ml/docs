@@ -11,7 +11,7 @@ Experiment
 
      .. autofunction:: add_sklearn_models
 
-     .. autofunction:: calculate_configs
+     .. autofunction:: configs
 
      .. autofunction:: start
 

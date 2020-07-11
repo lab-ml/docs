@@ -167,7 +167,7 @@ Here’s how you run an experiment with the configurations.
     conf = Configs()
     conf.variant = 'large'
     experiment.create(name='test_configs')
-    experiment.calculate_configs(conf)
+    experiment.configs(conf)
     logger.inspect(model=conf.model)
 
 
