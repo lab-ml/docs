@@ -11,4 +11,6 @@ Configs
 
     .. autofunction:: hyperparams
 
+    .. autofunction:: meta_config
+
     .. autofunction:: aggregate

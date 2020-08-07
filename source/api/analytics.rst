@@ -15,6 +15,8 @@ Analytics
 
     .. autofunction:: binned_heatmap
 
+    .. autofunction:: histogram
+
     .. autofunction:: indicator_data
 
     .. autofunction:: artifact_data

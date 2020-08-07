@@ -7,6 +7,8 @@ Experiment
 
      .. autofunction:: get_uuid
 
+     .. autofunction:: add_model_savers
+
      .. autofunction:: add_pytorch_models
 
      .. autofunction:: add_sklearn_models
@@ -16,6 +18,8 @@ Experiment
      .. autofunction:: start
 
      .. autofunction:: load
+
+     .. autofunction:: load_configs
 
      .. autofunction:: save_checkpoint
 
