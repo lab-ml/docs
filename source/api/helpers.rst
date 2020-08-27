@@ -1,6 +1,12 @@
 Helpers
 =========
 
+.. warning::
+
+    This module is still experimental.
+    We intend to move this to a separate package.
+
+
 .. automodule:: labml.helpers.training_loop
 
     .. autoclass:: TrainingLoopConfigs

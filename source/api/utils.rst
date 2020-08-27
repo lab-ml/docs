@@ -6,8 +6,3 @@ Utils
     .. autofunction:: store_model_indicators
 
     .. autofunction:: get_modules
-
-
-.. automodule:: labml.utils.data.pytorch
-
-    .. autoclass:: CsvDataset

@@ -23,5 +23,8 @@ Experiment
 
      .. autofunction:: save_checkpoint
 
+     .. autofunction:: load_models
+
      .. autofunction:: save_numpy
 
+     .. autofunction:: record
