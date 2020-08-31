@@ -1,39 +1,40 @@
 Helpers
-=========
+=======
 
-.. warning::
+Installation
+------------
 
-    This module is still experimental.
-    We intend to move this to a separate package.
+.. code-block:: console
 
+    pip install labml_helpers
 
-.. automodule:: labml.helpers.training_loop
+Modules
+-------
+
+.. automodule:: labml_helpers.training_loop
 
     .. autoclass:: TrainingLoopConfigs
 
 
-PyTorch
--------
-
-.. automodule:: labml.helpers.pytorch.device
+.. automodule:: labml_helpers.device
 
     .. autoclass:: DeviceConfigs
 
-.. automodule:: labml.helpers.pytorch.seed
+.. automodule:: labml_helpers.seed
 
     .. autoclass:: SeedConfigs
 
-.. automodule:: labml.helpers.pytorch.train_valid
+.. automodule:: labml_helpers.train_valid
 
     .. autoclass:: TrainValidConfigs
 
-PyTorch Datasets
-^^^^^^^^^^^^^^^^
+Datasets
+^^^^^^^^
 
-.. automodule:: labml.helpers.pytorch.datasets.mnist
+.. automodule:: labml_helpers.datasets.mnist
 
     .. autoclass:: MNISTConfigs
 
-.. automodule:: labml.helpers.pytorch.datasets.cifar10
+.. automodule:: labml_helpers.datasets.cifar10
 
     .. autoclass:: CIFAR10Configs
