@@ -14,7 +14,7 @@ LabML
 LabML lets you monitor AI model training on mobile phones.
 
 .. image:: https://raw.githubusercontent.com/vpj/lab/master/images/mobile.png
-   :width: 80%
+   :width: 100%
    :alt: Mobile view 
 
 You just need to create an `experiment <http://lab-ml.com/guide/experiment.html>`_,
