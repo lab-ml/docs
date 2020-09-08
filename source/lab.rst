@@ -3,27 +3,55 @@
    :alt: Logo
    :align: center
 
+.. image:: https://badge.fury.io/py/labml.svg
+    :target: https://badge.fury.io/py/labml
+.. image:: https://pepy.tech/badge/labml
+    :target: https://pepy.tech/project/labml
+
 LabML
 =====
 
-LabML is a library to track PyTorch experiments.
+LabML lets you monitor AI model training on mobile phones.
 
-LabML keeps track of every detail of the experiments:
-`source code <http://lab-ml.com/guide/experiment.html>`_,
-`configurations, hyper-parameters <http://lab-ml.com/guide/configs.html>`_,
-`checkpoints <http://lab-ml.com/guide/experiment.html>`_,
-`Tensorboard logs and other statistics <http://lab-ml.com/guide/tracker.html>`_.
-LabML saves all these automatically in a clean folder structure.
+.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/mobile.png
+   :width: 50%
+   :alt: Mobile view 
 
-.. image: https://raw.githubusercontent.com/vpj/lab/master/images/loop.gif
-   :width: 100%
-   :alt: Logger output
+You just need to create an `experiment <http://lab-ml.com/guide/experiment.html>`_,
+and save stats with `tracker <http://lab-ml.com/guide/tracker.html>`_.
+You can obtain a token from `LabML App <https://web.lab-ml.com>`_
+(`Githup repo <https://github.com/lab-ml/app/>`_).
 
-LabML comes with a `Dashboard <https://github.com/vpj/lab_dashboard/>`_ to browse experiments.
+.. code-block:: python
+
+    from labml import tracker, experiment
+  
+    experiment.record(name='sin_wave', conf_dict=configs, lab_conf={'web_api': 'TOKEN URL FROM web.lab-ml.com'})
+
+    for i in range(50):
+        loss, accuracy = train()
+        tracker.save(i, {'loss': loss, 'accuracy': accuracy})
+
+It automatically pushes data to Tensorboard, and you can keep your old experiments organized with the 
+`LabML Dashboard <https://github.com/lab-ml/dashboard/>`_
 
 .. image:: https://raw.githubusercontent.com/lab-ml/dashboard/master/images/screenshots/dashboard_table.png
    :width: 100%
    :alt: Dashboard Screenshot
+
+All these software is open source,
+and your logs will be stored locally for Tensorboard and `LabML Dashboard <https://github.com/lab-ml/dashboard/>`_.
+You will only be sending data away for `LabML App <https://web.lab-ml.com>`_ if you include a token url.
+This can also be `locally installed <https://github.com/lab-ml/app/>`_.
+
+LabML can also do a bunch of other things like keeping track of git commits,
+ handling `configurations, hyper-parameters <http://lab-ml.com/guide/configs.html>`_,
+ saving and loading `checkpoints <http://lab-ml.com/guide/experiment.html>`_,
+ and providing pretty logs.
+
+.. image:: https://raw.githubusercontent.com/vpj/lab/master/images/logger_sample.png
+   :width: 50%
+   :alt: Logger output
 
 
 Installation
