@@ -14,7 +14,7 @@ LabML
 LabML lets you monitor AI model training on mobile phones.
 
 .. image:: https://raw.githubusercontent.com/vpj/lab/master/images/mobile.png
-   :width: 50%
+   :width: 80%
    :alt: Mobile view 
 
 You just need to create an `experiment <http://lab-ml.com/guide/experiment.html>`_,
@@ -45,12 +45,12 @@ You will only be sending data away for `LabML App <https://web.lab-ml.com>`_ if 
 This can also be `locally installed <https://github.com/lab-ml/app/>`_.
 
 LabML can also do a bunch of other things like keeping track of git commits,
- handling `configurations, hyper-parameters <http://lab-ml.com/guide/configs.html>`_,
- saving and loading `checkpoints <http://lab-ml.com/guide/experiment.html>`_,
- and providing pretty logs.
+handling `configurations, hyper-parameters <http://lab-ml.com/guide/configs.html>`_,
+saving and loading `checkpoints <http://lab-ml.com/guide/experiment.html>`_,
+and providing pretty logs.
 
 .. image:: https://raw.githubusercontent.com/vpj/lab/master/images/logger_sample.png
-   :width: 50%
+   :width: 100%
    :alt: Logger output
 
 
