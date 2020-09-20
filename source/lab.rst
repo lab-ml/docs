@@ -17,10 +17,15 @@ LabML lets you monitor AI model training on mobile phones.
    :width: 100%
    :alt: Mobile view 
 
-You just need to create an `experiment <http://lab-ml.com/guide/experiment.html>`_,
-and save stats with `tracker <http://lab-ml.com/guide/tracker.html>`_.
-You can obtain a token from `LabML App <https://web.lab-ml.com>`_
-(`Githup repo <https://github.com/lab-ml/app/>`_).
+You can install this package using PIP.
+
+.. code-block:: console
+
+    pip install labml
+
+
+To push to mobile website, you need obtain a token from `web.lab-ml.com <https://web.lab-ml.com>`_
+(`Githup lab-ml/app <https://github.com/lab-ml/app/>`_), and save statistics with `tracker.save`.
 
 PyTorch example
 ^^^^^^^^^^^^^^^
@@ -47,6 +52,9 @@ TensorFlow 2.0 Keras example
             model.fit(x_train, y_train, epochs=conf['epochs'], validation_data=(x_test, y_test),
                       callbacks=[LabMLKerasCallback()], verbose=None)
 
+You can read the guides about creating an  `experiment <http://lab-ml.com/guide/experiment.html>`_,
+and saving statistics with `tracker <http://lab-ml.com/guide/tracker.html>`_ for details.
+
 It automatically pushes data to Tensorboard, and you can keep your old experiments organized with the 
 `LabML Dashboard <https://github.com/lab-ml/dashboard/>`_
 
@@ -68,13 +76,6 @@ and providing pretty logs.
    :width: 100%
    :alt: Logger output
 
-
-Installation
-------------
-
-.. code-block:: console
-
-    pip install labml
 
 Links
 -----
