@@ -7,6 +7,8 @@ Configs
 
     .. autofunction:: option
 
+    .. autofunction:: setup
+    
     .. autofunction:: calculate
 
     .. autofunction:: hyperparams
