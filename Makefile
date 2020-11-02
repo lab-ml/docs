@@ -8,7 +8,7 @@ SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 PYCMD         = python
-PAGES_REPO    = lab-ml.github.io
+PAGES_REPO    = pages
 
 # Put it first so that "make" without argument is like "make help".
 help:
