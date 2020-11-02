@@ -28,12 +28,3 @@
    api/helpers
    api/analytics
    api/manage
-
-.. toctree::
-   :maxdepth: 1
-   :name: Tutorials
-   :caption: Tutorials
-
-   MNIST Tutorial <https://medium.com/@labml/mnist-tutorial-with-lab-a-step-by-step-guide-dbb48ffbd14e>
-
-
