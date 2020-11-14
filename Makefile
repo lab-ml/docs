@@ -11,7 +11,7 @@ PYCMD         = python
 PAGES_REPO    = pages
 
 # Put it first so that "make" without argument is like "make help".
-help:
+sphinx-help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 
@@ -33,4 +33,7 @@ pages: rebuild
 	@cd ../$(PAGES_REPO); git pull
 	@cp -r $(BUILDDIR)/html/* ../$(PAGES_REPO)
 
-.PHONY: build clean help
+help: ## Show this help.
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+
+.PHONY: build clean help sphinx-help pages rebuild
