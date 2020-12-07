@@ -28,3 +28,12 @@
    api/helpers
    api/analytics
    api/manage
+
+.. toctree::
+   :maxdepth: 1
+   :name: Links
+   :caption: Links
+
+   🧠 LabML NN: A collection of PyTorch implementations of neural network architectures and layers. <https://lab-ml.com/labml_nn/index.html>
+
+
