@@ -1,4 +1,3 @@
-
 Experiment
 ==========
 
@@ -17,7 +16,7 @@ cannot find the calling file name. ``comment`` can be changed later from
 .. code-block:: python
 
     experiment.create(name="mnist_pytorch",
-                     comment="Test")
+                      comment="Test")
 
 Starting an experiments creates folders, stores the experiment
 configurations, git commits, and source diffs.
@@ -30,10 +29,35 @@ configurations, git commits, and source diffs.
 
 .. raw:: html
 
-    <pre>
-    <strong><span style="text-decoration: underline">mnist_pytorch</span></strong>: <span style="color: #208FFB">2a81805c946011eabd18acde48001122</span>
+    <pre style="overflow-x: scroll;">
+    <strong><span style="text-decoration: underline">mnist_pytorch</span></strong>: <span style="color: #208FFB">2ade3718392c11ebaaadacde48001122</span>
     	<strong><span style="color: #DDB62B">Test</span></strong>
-    	[dirty]: <strong><span style="color: #DDB62B">"citation"</span></strong></pre>
+    	[dirty]: <strong><span style="color: #DDB62B">"link nn"</span></strong></pre>
+
+
+
+
+.. parsed-literal::
+
+    <labml.internal.experiment.watcher.ExperimentWatcher at 0x7fea72e508d0>
+
+
+
+
+.. raw:: html
+
+    <pre style="overflow-x: scroll;"><span style="color: #C5C1B4"></span>
+    <span style="color: #C5C1B4">--------------------------------------------------</span><span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>
+    <span style="color: #DDB62B"><strong><span style="text-decoration: underline">LABML WARNING</span></strong></span>
+    <span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>LabML App Warning: <span style="color: #60C6C8">empty_token: </span><strong>Please create a valid token at https://web.lab-ml.com.</strong>
+    <strong>Click on the experiment link to monitor the experiment and add it to your experiments list.</strong><span style="color: #C5C1B4"></span>
+    <span style="color: #C5C1B4">--------------------------------------------------</span></pre>
+
+
+
+.. raw:: html
+
+    <pre style="overflow-x: scroll;"><span style="color: #208FFB">Monitor experiment at </span><a href='https://web.lab-ml.com/run?run_uuid=2ade3718392c11ebaaadacde48001122' target='blank'>https://web.lab-ml.com/run?run_uuid=2ade3718392c11ebaaadacde48001122</a></pre>
 
 
 You can also start from a previously saved checkpoint.

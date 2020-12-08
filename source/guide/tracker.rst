@@ -1,4 +1,3 @@
-
 Tracker
 =======
 
@@ -12,7 +11,7 @@ histograms.
     
     import numpy as np
     
-    from labml import loop, tracker, logger
+    from labml import tracker, logger
     
     # dummy train function
     def train():
@@ -23,7 +22,7 @@ histograms.
 
 This stores all the loss values and writes the logs the mean on every
 tenth iteration. Console output line is replaced until
-:py:func:`labml.logger.log` is called.
+:func:`labmlml.logger.log` is called.
 
 .. code-block:: python
 
@@ -41,10 +40,10 @@ tenth iteration. Console output line is replaced until
 
 .. raw:: html
 
-    <pre>
-    
-    
-    </pre>
+    <pre style="overflow-x: scroll;"><strong><span style="color: #DDB62B">     100:  </span></strong> loss: <strong> 37.7000</strong>
+    <strong><span style="color: #DDB62B">     200:  </span></strong> loss: <strong> 54.1000</strong>
+    <strong><span style="color: #DDB62B">     300:  </span></strong> loss: <strong> 58.8000</strong>
+    <strong><span style="color: #DDB62B">     400:  </span></strong> loss: <strong> 42.7000</strong></pre>
 
 
 Indicator settings
@@ -99,9 +98,8 @@ to console
 
 .. raw:: html
 
-    <pre>
-    
-    
-    <strong><span style="color: #DDB62B">     390:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 385.500</strong> value: <strong> 46.6000</strong></pre>
-
+    <pre style="overflow-x: scroll;"><strong><span style="color: #DDB62B">     100:  </span></strong> loss: <strong>  1.0000</strong> reward: <strong> 95.5000</strong> value: <strong> 45.2000</strong>
+    <strong><span style="color: #DDB62B">     200:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 195.500</strong> value: <strong> 61.0000</strong>
+    <strong><span style="color: #DDB62B">     300:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 295.500</strong> value: <strong> 60.3000</strong>
+    <strong><span style="color: #DDB62B">     390:  </span></strong> loss: <strong> 1.00000</strong> reward: <strong> 385.500</strong> value: <strong> 57.7000</strong></pre>
 

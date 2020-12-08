@@ -40,7 +40,7 @@ object. In this example we use a PyTorch ``DataLoader``.
 
 .. raw:: html
 
-    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,670.82ms</span>
+    <pre style="overflow-x: scroll;">Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	7,044.82ms</span>
     </pre>
 
 
@@ -53,7 +53,7 @@ object. In this example we use a PyTorch ``DataLoader``.
 
 .. raw:: html
 
-    <pre>Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	5,698.60ms</span>
+    <pre style="overflow-x: scroll;">Test<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	6,961.66ms</span>
     </pre>
 
 
@@ -73,7 +73,7 @@ keep the code clean by separating different blocks of code.
 
 .. raw:: html
 
-    <pre>Load data<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	2,003.36ms</span>
+    <pre style="overflow-x: scroll;">Load data<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	2,007.06ms</span>
     </pre>
 
 
@@ -87,7 +87,7 @@ keep the code clean by separating different blocks of code.
 
 .. raw:: html
 
-    <pre>Load saved model<span style="color: #E75C58">...[FAIL]</span><span style="color: #208FFB">	1,007.45ms</span>
+    <pre style="overflow-x: scroll;">Load saved model<span style="color: #E75C58">...[FAIL]</span><span style="color: #208FFB">	1,009.20ms</span>
     </pre>
 
 
@@ -105,30 +105,23 @@ You can also show progress while a section is running
 
 .. raw:: html
 
-    <pre>Train<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	10,508.56ms</span>
+    <pre style="overflow-x: scroll;">Train<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	10,605.45ms</span>
     </pre>
 
 
 Loop
 ----
 
-This can be used for the training loop. The :func:`loop` keeps track of
+This can be used for the training loop. The :func:loop keeps track of
 the time taken and time remaining for the loop.
 
-:func:`labml.tracker.save` outputs the current status along with global
+:func:labml.tracker.save outputs the current status along with global
 step.
 
 .. code-block:: python
 
     for step in monit.loop(range(0, 400)):
         tracker.save()
-
-
-
-.. raw:: html
-
-    <pre><strong><span style="color: #DDB62B">     399:  </span></strong>  <span style="color: #208FFB">2ms</span><span style="color: #D160C4">  0:00m/  0:00m  </span></pre>
-
 
 .. code-block:: python
 
@@ -141,11 +134,3 @@ You can manually increment global step too.
     for step in monit.loop(range(0, 400)):
         tracker.add_global_step(5)
         tracker.save()
-
-
-
-.. raw:: html
-
-    <pre><strong><span style="color: #DDB62B">   2,000:  </span></strong>  <span style="color: #208FFB">2ms</span><span style="color: #D160C4">  0:00m/  0:00m  </span></pre>
-
-

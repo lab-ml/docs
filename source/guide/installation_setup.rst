@@ -48,9 +48,9 @@ The values will default to above so an empty file should work for most of the us
 	``web_api_verify_connection``: Whether to verify SSL certificate of the app.
 	You might want to set this to false if you self host and use an unverified SSL certificate.
 
-	``web_api_open_browser``: Whether to open the monitoring url in the browser automatically.
+	``web_api_open_browser``:` Whether to open the monitoring url in the browser automatically.
 
-	``indicators``: Use this to specify types of `indicators for tracker <tracker.html>`_.
+	`indicators``: Use this to specify types of `indicators for tracker <tracker.html>`_.
 	``class_name`` is the type of the indicator. ``is_print`` is whether to output
 	the statistic to console and `LabML App <https://github.com/lab-ml/app>`_.
 	``name`` can be a wildcard selector for indicator names. You can set these individually with

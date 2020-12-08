@@ -174,10 +174,9 @@ Here’s how you run an experiment with the configurations.
 
 .. raw:: html
 
-    <pre>
-    
-    <span style="color: #60C6C8">model: </span><strong>TwoHiddenLayerModule(</strong>
-    <strong>  (input_fc): Linear(in_features=10, out_features=1024, bi ...</strong></pre>
+    <pre style="overflow-x: scroll;">
+    Prepare model<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">	16.92ms</span>
+    <span style="color: #60C6C8">model: </span><strong>TwoHiddenLayerModule(</strong><span style="color: #C5C1B4">\n</span><strong>  (input_fc): Linear(in_features=10, out_features=1024, bia</strong><span style="color: #DDB62B"> ...</span></pre>
 
 
 .. code-block:: python
@@ -188,20 +187,33 @@ Here’s how you run an experiment with the configurations.
 
 .. raw:: html
 
-    <pre>
-    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">cacb5574a17b11eaa8eef218981c2492</span>
-    	[dirty]: <strong><span style="color: #DDB62B">"front page"</span></strong>
-    <span style="text-decoration: underline">Configs:</span>
-    	<span style="color: #60C6C8">cuda_device</span><span style="color: #C5C1B4"> = </span><strong>0</strong>	
-    	<span style="color: #60C6C8">device</span><span style="color: #C5C1B4"> = </span><strong>cpu</strong>	<span style="color: #C5C1B4">cuda</span>
-    	<span style="color: #60C6C8"><strong><span style="color: #DDB62B">epochs</span></strong></span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
-    	<span style="color: #60C6C8">input_size</span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
-    	<span style="color: #60C6C8">model</span><span style="color: #C5C1B4"> = </span><strong>TwoHiddenLayerModule(  (input_fc): Linea...</strong>	two_hidden_layer<span style="color: #C5C1B4">	[</span>one_hidden_layer<span style="color: #C5C1B4">]</span>
-    	<span style="color: #60C6C8">model_size</span><span style="color: #C5C1B4"> = </span><strong>1024</strong>	
-    	<span style="color: #60C6C8">output_size</span><span style="color: #C5C1B4"> = </span><strong>10</strong>	
-    	<span style="color: #60C6C8">steps_per_epcoch</span><span style="color: #C5C1B4"> = </span><strong>1024</strong>	
-    	<span style="color: #60C6C8">total_steps</span><span style="color: #C5C1B4"> = </span><strong>10240</strong>	<span style="color: #C5C1B4"><lambda></span>
-    	<span style="color: #60C6C8">use_cuda</span><span style="color: #C5C1B4"> = </span><strong>True</strong>	
-    	<span style="color: #60C6C8"><strong><span style="color: #DDB62B">variant</span></strong></span><span style="color: #C5C1B4"> = </span><strong>large</strong>	
-    </pre>
+    <pre style="overflow-x: scroll;">
+    <strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">66482396392b11eba0aeacde48001122</span>
+    	[dirty]: <strong><span style="color: #DDB62B">"link nn"</span></strong></pre>
+
+
+
+
+.. parsed-literal::
+
+    <labml.internal.experiment.watcher.ExperimentWatcher at 0x7f93a76ceb50>
+
+
+
+
+.. raw:: html
+
+    <pre style="overflow-x: scroll;"><span style="color: #C5C1B4"></span>
+    <span style="color: #C5C1B4">--------------------------------------------------</span><span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>
+    <span style="color: #DDB62B"><strong><span style="text-decoration: underline">LABML WARNING</span></strong></span>
+    <span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>LabML App Warning: <span style="color: #60C6C8">empty_token: </span><strong>Please create a valid token at https://web.lab-ml.com.</strong>
+    <strong>Click on the experiment link to monitor the experiment and add it to your experiments list.</strong><span style="color: #C5C1B4"></span>
+    <span style="color: #C5C1B4">--------------------------------------------------</span></pre>
+
+
+
+.. raw:: html
+
+    <pre style="overflow-x: scroll;"><span style="color: #208FFB">Monitor experiment at </span><a href='https://web.lab-ml.com/run?run_uuid=66482396392b11eba0aeacde48001122' target='blank'>https://web.lab-ml.com/run?run_uuid=66482396392b11eba0aeacde48001122</a></pre>
+
 

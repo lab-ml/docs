@@ -15,13 +15,13 @@ Logging with colors
 
 .. code-block:: python
 
-    logger.log("Colors are missing when views on github", Text.highlight)
+    logger.log("Colors are missing when viewed on github", Text.highlight)
 
 
 
 .. raw:: html
 
-    <pre><strong><span style="color: #DDB62B">Colors are missing when views on github</span></strong></pre>
+    <pre style="overflow-x: scroll;"><strong><span style="color: #DDB62B">Colors are missing when viewed on github</span></strong></pre>
 
 
 You can use predifined styles
@@ -46,7 +46,7 @@ You can use predifined styles
 
 .. raw:: html
 
-    <pre><span style="text-decoration: underline">Styles </span><span style="color: #E75C58">Danger </span><span style="color: #DDB62B">Warning </span><span style="color: #208FFB">Meta </span><span style="color: #60C6C8">Key </span><span style="color: #D160C4">Meta2 </span><strong><span style="text-decoration: underline">Title </span></strong><span style="text-decoration: underline">Heading </span><strong>Value </strong><strong><span style="color: #DDB62B">Highlight </span></strong><span style="color: #C5C1B4">Subtle</span></pre>
+    <pre style="overflow-x: scroll;"><span style="text-decoration: underline">Styles </span><span style="color: #E75C58">Danger </span><span style="color: #DDB62B">Warning </span><span style="color: #208FFB">Meta </span><span style="color: #60C6C8">Key </span><span style="color: #D160C4">Meta2 </span><strong><span style="text-decoration: underline">Title </span></strong><span style="text-decoration: underline">Heading </span><strong>Value </strong><strong><span style="color: #DDB62B">Highlight </span></strong><span style="color: #C5C1B4">Subtle</span></pre>
 
 
 Or, specify colors
@@ -69,7 +69,7 @@ Or, specify colors
 
 .. raw:: html
 
-    <pre><span style="text-decoration: underline">Colors </span><span style="color: #E75C58">Red </span><span style="color: #3E424D">Black </span><span style="color: #208FFB">Blue </span><span style="color: #60C6C8">Cyan </span><span style="color: #00A250">Green </span><span style="color: #DDB62B">Orange </span><span style="color: #D160C4"><span style="text-decoration: underline">Purple Heading </span></span><span style="color: #C5C1B4">White</span></pre>
+    <pre style="overflow-x: scroll;"><span style="text-decoration: underline">Colors </span><span style="color: #E75C58">Red </span><span style="color: #3E424D">Black </span><span style="color: #208FFB">Blue </span><span style="color: #60C6C8">Cyan </span><span style="color: #00A250">Green </span><span style="color: #DDB62B">Orange </span><span style="color: #D160C4"><span style="text-decoration: underline">Purple Heading </span></span><span style="color: #C5C1B4">White</span></pre>
 
 
 Logging debug info
@@ -85,7 +85,7 @@ You can pretty print python objects with :meth:`inspect`.
 
 .. raw:: html
 
-    <pre><span style="color: #60C6C8">a: </span><strong>2</strong>
+    <pre style="overflow-x: scroll;"><span style="color: #60C6C8">a: </span><strong>2</strong>
     <span style="color: #60C6C8">b: </span><strong>1</strong></pre>
 
 
@@ -97,7 +97,7 @@ You can pretty print python objects with :meth:`inspect`.
 
 .. raw:: html
 
-    <pre><span style="color: #60C6C8"> name: </span><span style="color: #C5C1B4">"</span><strong>Name</strong><span style="color: #C5C1B4">"</span>
+    <pre style="overflow-x: scroll;"><span style="color: #60C6C8"> name: </span><span style="color: #C5C1B4">"</span><strong>Name</strong><span style="color: #C5C1B4">"</span>
     <span style="color: #60C6C8">price: </span><strong>22</strong>
     Total <span style="color: #208FFB">2</span> item(s)</pre>
 
@@ -115,15 +115,15 @@ Log PyTorch tensors and NumPy arrays
 
 .. raw:: html
 
-    <pre><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">torch.int64</span>
+    <pre style="overflow-x: scroll;"><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">torch.int64</span>
     <span style="color: #C5C1B4">shape: </span><strong>[10, 10]</strong>
-    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB">49.5</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB">29.011491775512695</span>
+    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB"> 49.5000</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB"> 29.0115</span>
     <strong></strong><span style="color: #C5C1B4">[</span><strong></strong>
     <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>0</strong><strong>, </strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>1</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>1</strong><strong>, </strong><strong>1</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>1</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>2</strong><strong>0</strong><strong>, </strong><strong>2</strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>2</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>10</strong><strong>, </strong><strong>11</strong><strong>, </strong><strong>12</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>19</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>20</strong><strong>, </strong><strong>21</strong><strong>, </strong><strong>22</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>29</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
     <strong></strong><strong> </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>9</strong><strong>0</strong><strong>, </strong><strong>9</strong><strong>1</strong><strong>, </strong><strong>9</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>90</strong><strong>, </strong><strong>91</strong><strong>, </strong><strong>92</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>99</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
     <strong></strong><strong></strong><span style="color: #C5C1B4">]</span></pre>
 
 
@@ -136,15 +136,14 @@ Log PyTorch tensors and NumPy arrays
 
 .. raw:: html
 
-    <pre><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">int64</span>
+    <pre style="overflow-x: scroll;"><span style="color: #C5C1B4">dtype: </span><span style="color: #208FFB">int64</span>
     <span style="color: #C5C1B4">shape: </span><strong>[10, 10]</strong>
-    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB">49.5</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB">28.86607004772212</span>
+    <span style="color: #C5C1B4">min: </span><span style="color: #208FFB">0</span> <span style="color: #C5C1B4">max: </span><span style="color: #208FFB">99</span> <span style="color: #C5C1B4">mean: </span><span style="color: #208FFB"> 49.5000</span> <span style="color: #C5C1B4">std: </span><span style="color: #208FFB"> 28.8661</span>
     <strong></strong><span style="color: #C5C1B4">[</span><strong></strong>
     <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>0</strong><strong>, </strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>1</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>1</strong><strong>, </strong><strong>1</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>1</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>2</strong><strong>0</strong><strong>, </strong><strong>2</strong><strong>1</strong><strong>, </strong><strong>2</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>2</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>10</strong><strong>, </strong><strong>11</strong><strong>, </strong><strong>12</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>19</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>20</strong><strong>, </strong><strong>21</strong><strong>, </strong><strong>22</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>29</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong>, </strong><strong></strong>
     <strong></strong><strong> </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong></strong>
-    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>9</strong><strong>0</strong><strong>, </strong><strong>9</strong><strong>1</strong><strong>, </strong><strong>9</strong><strong>2</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>9</strong><strong>9</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
+    <strong></strong><strong> </strong><span style="color: #C5C1B4">[</span><strong>90</strong><strong>, </strong><strong>91</strong><strong>, </strong><strong>92</strong><strong>, </strong><span style="color: #C5C1B4">...</span><strong>, </strong><strong>99</strong><strong> </strong><span style="color: #C5C1B4">]</span><strong></strong>
     <strong></strong><strong></strong><span style="color: #C5C1B4">]</span></pre>
-
 
