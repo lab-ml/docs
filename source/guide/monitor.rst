@@ -3,7 +3,19 @@
 Monitor
 =======
 
+|Github| |Open In Colab|
+
 .. currentmodule:: labml.monit
+
+.. |Github| image:: https://img.shields.io/github/stars/lab-ml/labml?style=social
+   :target: https://github.com/lab-ml/labml
+.. |Open In Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/monitor.ipynb
+
+.. code-block:: python
+
+    %%capture
+    !pip install labml
 
 Iterators & Enumerators
 -----------------------

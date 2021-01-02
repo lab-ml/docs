@@ -1,7 +1,19 @@
 Logger
 ======
 
+|Github| |Open In Colab|
+
+.. |Github| image:: https://img.shields.io/github/stars/lab-ml/labml?style=social
+   :target: https://github.com/lab-ml/labml
+.. |Open In Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/logger.ipynb
+
 .. currentmodule:: labml.logger
+
+.. code-block:: python
+
+    %%capture
+    !pip install labml
 
 .. code-block:: python
 

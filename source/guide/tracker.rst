@@ -1,9 +1,21 @@
 Tracker
 =======
 
+|Github| |Open In Colab|
+
 Here you specify indicators and the logger stores them temporarily and
 write in batches. It can aggregate and write them as means or
 histograms.
+
+.. |Github| image:: https://img.shields.io/github/stars/lab-ml/labml?style=social
+   :target: https://github.com/lab-ml/labml
+.. |Open In Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/tracker.ipynb
+
+.. code-block:: python
+
+    %%capture
+    !pip install labml
 
 .. code-block:: python
 
@@ -11,7 +23,7 @@ histograms.
     
     import numpy as np
     
-    from labml import tracker, logger
+    from labml import tracker
     
     # dummy train function
     def train():
@@ -22,7 +34,7 @@ histograms.
 
 This stores all the loss values and writes the logs the mean on every
 tenth iteration. Console output line is replaced until
-:func:`labmlml.logger.log` is called.
+:func:`labml.tracker.new_line` is called.
 
 .. code-block:: python
 
@@ -33,17 +45,17 @@ tenth iteration. Console output line is replaced until
         if i % 10 == 0:
             tracker.save()
         if i % 100 == 0:
-            logger.log()
+            tracker.new_line()
         time.sleep(0.02)
 
 
 
 .. raw:: html
 
-    <pre style="overflow-x: scroll;"><strong><span style="color: #DDB62B">     100:  </span></strong> loss: <strong> 37.7000</strong>
-    <strong><span style="color: #DDB62B">     200:  </span></strong> loss: <strong> 54.1000</strong>
-    <strong><span style="color: #DDB62B">     300:  </span></strong> loss: <strong> 58.8000</strong>
-    <strong><span style="color: #DDB62B">     400:  </span></strong> loss: <strong> 42.7000</strong></pre>
+    <pre style="overflow-x: scroll;"><strong><span style="color: #DDB62B">     100:  </span></strong> loss: <strong> 45.1000</strong>
+    <strong><span style="color: #DDB62B">     200:  </span></strong> loss: <strong> 60.9000</strong>
+    <strong><span style="color: #DDB62B">     300:  </span></strong> loss: <strong> 61.1000</strong>
+    <strong><span style="color: #DDB62B">     400:  </span></strong> loss: <strong> 55.6000</strong></pre>
 
 
 Indicator settings
@@ -92,7 +104,7 @@ to console
         if i % 10 == 0:
             tracker.save()
         if i % 100 == 0:
-            logger.log()
+            tracker.new_line()
 
 
 

@@ -1,12 +1,24 @@
 Configs
 =======
 
+|Github| |Open In Colab|
+
 .. currentmodule:: labml.configs
+
+.. |Github| image:: https://img.shields.io/github/stars/lab-ml/labml?style=social
+   :target: https://github.com/lab-ml/labml
+.. |Open In Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/configs.ipynb
 
 The configurations provide an API to easily manage hyper-parameters and
 other configurable parameters of the experiments. The configuration of
 each experiment run are stored. These can be viewed on
 `Dashboard <https://github.com/vpj/labmlml_dashboard>`__.
+
+.. code-block:: python
+
+    %%capture
+    !pip install labml
 
 .. code-block:: python
 

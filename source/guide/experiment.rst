@@ -1,8 +1,20 @@
 Experiment
 ==========
 
+|Github| |Open In Colab|
+
 labmlml will keep track of experiments if you declare an Experiment. It
 will keep track of logs, code diffs, git commits, etc.
+
+.. |Github| image:: https://img.shields.io/github/stars/lab-ml/labml?style=social
+   :target: https://github.com/lab-ml/labml
+.. |Open In Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/experiment.ipynb
+
+.. code-block:: python
+
+    %%capture
+    !pip install labml
 
 .. code-block:: python
 
