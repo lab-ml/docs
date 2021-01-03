@@ -89,7 +89,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {
     # 'pytorch_project': '',
     'analytics_id': 'UA-164228270-1',
-    'canonical_url': 'https://blog.varunajasasiri.com/lab',
+    'canonical_url': 'https://lab-ml.com/',
     'collapse_navigation': False,
     'display_version': True,
     # 'logo_only': True,
