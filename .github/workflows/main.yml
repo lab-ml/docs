@@ -1,0 +1,27 @@
+name: Publish Docs
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare build environment
+        run: make prepare
+      
+      - name: Build docs
+        run: make pages
+
+      - name: Publish docs
+        run: |
+          git config --global user.name 'LabML Build Bot'
+          git config --global user.email 'buildbot@labml.ai'
+          git commit -am "Publishing Docs"
+          git push
