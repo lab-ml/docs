@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name 'LabML Build Bot'
           git config --global user.email 'buildbot@labml.ai'
-          git add html
+          git add docs
           git commit -am "Publishing Docs"
           git push
