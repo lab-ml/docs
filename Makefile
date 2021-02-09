@@ -2,7 +2,7 @@ sphinx-help: ## Sphinx help
 	@sphinx-build -M help source build
 
 prepare: ## Prepare environment for build
-	@pip install -r requirements.txt
+	@pip3 install -r requirements.txt
 
 build: ## Build docs
 	@sphinx-build -M html source build
@@ -17,8 +17,8 @@ clean: ## Clean
 rebuild: clean build ## Rebuild docs
 
 pages: rebuild ## Create pages
-	@cd ../pages; git pull
-	@cp -r build/html/* ../pages
+	@mkdir -p html
+	@cp -r build/html/* html
 
 help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
