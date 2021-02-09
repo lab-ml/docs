@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Configs &mdash; LabML 0.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lab_icon.png"/>
+  
+
+  
+  
+    <link rel="canonical" href="https://lab-ml.com/guide/configs.html"/>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tracker" href="tracker.html" />
+    <link rel="prev" title="Monitor" href="monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LabML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation_setup.html">Installation &amp; Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation_setup.html#lab">Lab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation_setup.html#create-labml-yaml-file">Create <code class="docutils literal notranslate"><span class="pre">.labml.yaml</span></code> file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation_setup.html#dashboard">Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logger.html">Logger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logger.html#logging-with-colors">Logging with colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logger.html#logging-debug-info">Logging debug info</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="monitor.html">Monitor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monitor.html#iterators-enumerators">Iterators &amp; Enumerators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitor.html#sections">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitor.html#loop">Loop</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#define-a-configuration-class">Define a configuration class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculated-configurations">Calculated configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inheriting-and-re-using-configuration-classes">Inheriting and re-using configuration classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-configurations-options">Defining configurations options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculating-with-predefined-functions-of-lambdas">Calculating with predefined functions of lambdas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aggregates">Aggregates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hyper-parameters">Hyper-parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-experiment">Running the experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tracker.html">Tracker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tracker.html#indicator-settings">Indicator settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analytics.html">Analytics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#load-runs">Load runs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#distribution-plot">Distribution plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#scatter-plot">Scatter plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#loading-artifacts">Loading artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#histogram">Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#binned-heatmap">Binned heatmap</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/lab.html">Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/configs.html">Configs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/logger.html">Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/monit.html">Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/tracker.html">Tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/helpers.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/helpers.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/helpers.html#module-labml_helpers.training_loop">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/helpers.html#module-labml_helpers.datasets.mnist">Datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/analytics.html">Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/manage.html">Manage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://lab-ml.com/labml_nn/index.html">🧠 LabML NN: A collection of PyTorch implementations of neural network architectures and layers.</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LabML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Configs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/guide/configs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configs">
+<h1>Configs<a class="headerlink" href="#configs" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/lab-ml/labml"><img alt="Github" src="https://img.shields.io/github/stars/lab-ml/labml?style=social" /></a> <a class="reference external" href="https://colab.research.google.com/github/lab-ml/labml/blob/master/guides/configs.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>The configurations provide an API to easily manage hyper-parameters and
+other configurable parameters of the experiments. The configuration of
+each experiment run are stored. These can be viewed on
+<a class="reference external" href="https://github.com/vpj/labmlml_dashboard">Dashboard</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install labml
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+
+<span class="kn">from</span> <span class="nn">labml</span> <span class="kn">import</span> <span class="n">tracker</span><span class="p">,</span> <span class="n">monit</span><span class="p">,</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">logger</span>
+<span class="kn">from</span> <span class="nn">labml.configs</span> <span class="kn">import</span> <span class="n">BaseConfigs</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">calculate</span><span class="p">,</span> <span class="n">hyperparams</span><span class="p">,</span> <span class="n">aggregate</span>
+</pre></div>
+</div>
+<div class="section" id="define-a-configuration-class">
+<h2>Define a configuration class<a class="headerlink" href="#define-a-configuration-class" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeviceConfigs</span><span class="p">(</span><span class="n">BaseConfigs</span><span class="p">):</span>
+    <span class="n">use_cuda</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">cuda_device</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">device</span><span class="p">:</span> <span class="nb">any</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calculated-configurations">
+<h2>Calculated configurations<a class="headerlink" href="#calculated-configurations" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@option</span><span class="p">(</span><span class="n">DeviceConfigs</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">cuda</span><span class="p">(</span><span class="n">c</span><span class="p">:</span> <span class="n">DeviceConfigs</span><span class="p">):</span>
+    <span class="n">is_cuda</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">use_cuda</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_cuda</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">cuda_device</span> <span class="o">&lt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cuda:</span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">cuda_device</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cuda device index </span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">cuda_device</span><span class="si">}</span><span class="s2"> higher than &quot;</span>
+                       <span class="sa">f</span><span class="s2">&quot;device count </span><span class="si">{</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">Text</span><span class="o">.</span><span class="n">warning</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cuda:</span><span class="si">{</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inheriting-and-re-using-configuration-classes">
+<h2>Inheriting and re-using configuration classes<a class="headerlink" href="#inheriting-and-re-using-configuration-classes" title="Permalink to this headline">¶</a></h2>
+<p>Configs classes can be inherited. This lets you separate configs into
+modules instead of passing <a class="reference external" href="https://www.reddit.com/r/MachineLearning/comments/g1vku4/d_antipatterns_in_open_sourced_ml_research_code/">monolithic config
+object</a>.</p>
+<p>You can even inherit a entire experiment setups and make a few
+modifications.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Configs</span><span class="p">(</span><span class="n">DeviceConfigs</span><span class="p">):</span>
+    <span class="n">model_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span>
+    <span class="n">input_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">output_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="n">model</span><span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="s1">&#39;two_hidden_layer&#39;</span>
+    <span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">steps_per_epcoch</span> <span class="o">=</span> <span class="mi">1024</span>
+    <span class="n">total_steps</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">variant</span><span class="p">:</span> <span class="nb">str</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defining-configurations-options">
+<h2>Defining configurations options<a class="headerlink" href="#defining-configurations-options" title="Permalink to this headline">¶</a></h2>
+<p>You can specify multiple config calculator functions. You pick which one
+to use by its name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OneHiddenLayerModule</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">model_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">model_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_fc</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_fc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># This is just for illustration purposes, ideally you should have a configuration</span>
+<span class="c1"># for number of hidden layers.</span>
+<span class="c1"># A real world example would be different architectures, like a dense network vs a CNN</span>
+<span class="k">class</span> <span class="nc">TwoHiddenLayerModule</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">model_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">model_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">middle_fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">model_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_fc</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">middle_fc</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_fc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+
+<span class="nd">@option</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">one_hidden_layer</span><span class="p">(</span><span class="n">c</span><span class="p">:</span> <span class="n">Configs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">OneHiddenLayerModule</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">input_size</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">model_size</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+
+<span class="nd">@option</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">two_hidden_layer</span><span class="p">(</span><span class="n">c</span><span class="p">:</span> <span class="n">Configs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">TwoHiddenLayerModule</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">input_size</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">model_size</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the configurations calculators pass only the needed parameters
+and not the whole config object. The library forces you to do that.</p>
+<p>However, you can directly set the model as an option, with <code class="docutils literal notranslate"><span class="pre">__init__</span></code>
+accepting <code class="docutils literal notranslate"><span class="pre">Configs</span></code> as a parameter, it is not a usage pattern we
+encourage.</p>
+</div>
+<div class="section" id="calculating-with-predefined-functions-of-lambdas">
+<h2>Calculating with predefined functions of lambdas<a class="headerlink" href="#calculating-with-predefined-functions-of-lambdas" title="Permalink to this headline">¶</a></h2>
+<p>You can also compute configs with <code class="docutils literal notranslate"><span class="pre">lambda</span></code> functions or predefined
+functions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">total_steps</span><span class="p">,</span> <span class="p">[</span><span class="n">Configs</span><span class="o">.</span><span class="n">epochs</span><span class="p">,</span> <span class="n">Configs</span><span class="o">.</span><span class="n">steps_per_epcoch</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">e</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aggregates">
+<h2>Aggregates<a class="headerlink" href="#aggregates" title="Permalink to this headline">¶</a></h2>
+<p>You can use aggregates to setup configs that depend on each other. For
+example, this is useful when you have LSTM based model and a CNN based
+model, and different data loaders for each architecture.</p>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">variant</span></code> to set both <code class="docutils literal notranslate"><span class="pre">model</span></code> and number of epochs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aggregate</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">variant</span><span class="p">,</span> <span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="s1">&#39;one_hidden_layer&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">epochs</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">aggregate</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">variant</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="s1">&#39;two_hidden_layer&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">epochs</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hyper-parameters">
+<h2>Hyper-parameters<a class="headerlink" href="#hyper-parameters" title="Permalink to this headline">¶</a></h2>
+<p>LabML will identify any parameter you explicily specify outside the
+declaration of the class as hyper-parameters (in this case <code class="docutils literal notranslate"><span class="pre">variant</span></code>
+because we set it with <code class="docutils literal notranslate"><span class="pre">conf.variant</span> <span class="pre">=</span> <span class="pre">'large'</span></code>. You can also specify
+hyper-parameters manually.</p>
+<p>The hyper-parameters will be highlighted among other configs in logs and
+in dashboard. These will also be logged in to Tensorboard.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hyperparams</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">epochs</span><span class="p">)</span>
+<span class="n">hyperparams</span><span class="p">(</span><span class="n">Configs</span><span class="o">.</span><span class="n">total_steps</span><span class="p">,</span> <span class="n">is_hyperparam</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-experiment">
+<h2>Running the experiment<a class="headerlink" href="#running-the-experiment" title="Permalink to this headline">¶</a></h2>
+<p>Here’s how you run an experiment with the configurations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="n">Configs</span><span class="p">()</span>
+<span class="n">conf</span><span class="o">.</span><span class="n">variant</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test_configs&#39;</span><span class="p">)</span>
+<span class="n">experiment</span><span class="o">.</span><span class="n">configs</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">conf</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre style="overflow-x: scroll;">
+Prepare model<span style="color: #00A250">...[DONE]</span><span style="color: #208FFB">     16.92ms</span>
+<span style="color: #60C6C8">model: </span><strong>TwoHiddenLayerModule(</strong><span style="color: #C5C1B4">\n</span><strong>  (input_fc): Linear(in_features=10, out_features=1024, bia</strong><span style="color: #DDB62B"> ...</span></pre><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<pre style="overflow-x: scroll;">
+<strong><span style="text-decoration: underline">test_configs</span></strong>: <span style="color: #208FFB">66482396392b11eba0aeacde48001122</span>
+    [dirty]: <strong><span style="color: #DDB62B">"link nn"</span></strong></pre><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">labml</span><span class="o">.</span><span class="n">internal</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">watcher</span><span class="o">.</span><span class="n">ExperimentWatcher</span> <span class="n">at</span> <span class="mh">0x7f93a76ceb50</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<pre style="overflow-x: scroll;"><span style="color: #C5C1B4"></span>
+<span style="color: #C5C1B4">--------------------------------------------------</span><span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>
+<span style="color: #DDB62B"><strong><span style="text-decoration: underline">LABML WARNING</span></strong></span>
+<span style="color: #DDB62B"><strong><span style="text-decoration: underline"></span></strong></span>LabML App Warning: <span style="color: #60C6C8">empty_token: </span><strong>Please create a valid token at https://web.lab-ml.com.</strong>
+<strong>Click on the experiment link to monitor the experiment and add it to your experiments list.</strong><span style="color: #C5C1B4"></span>
+<span style="color: #C5C1B4">--------------------------------------------------</span></pre><pre style="overflow-x: scroll;"><span style="color: #208FFB">Monitor experiment at </span><a href='https://web.lab-ml.com/run?run_uuid=66482396392b11eba0aeacde48001122' target='blank'>https://web.lab-ml.com/run?run_uuid=66482396392b11eba0aeacde48001122</a></pre></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tracker.html" class="btn btn-neutral float-right" title="Tracker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="monitor.html" class="btn btn-neutral float-left" title="Monitor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Lab contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-164228270-1', 'auto');
+    
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
