@@ -17,8 +17,8 @@ clean: ## Clean
 rebuild: clean build ## Rebuild docs
 
 pages: rebuild ## Create pages
-	@mkdir -p html
-	@cp -r build/html/* html
+	@mkdir -p docs
+	@cp -r build/html/* docs
 
 help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
