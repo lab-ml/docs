@@ -8,14 +8,14 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
-    
+    runs-on: ubuntu-20.04
+
     steps:
       - uses: actions/checkout@v2
 
       - name: Prepare build environment
         run: make prepare
-      
+
       - name: Build docs
         run: make pages
 
