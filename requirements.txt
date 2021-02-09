@@ -1,0 +1,8 @@
+Sphinx
+sphinx-rtd-theme
+sphinxcontrib-katex
+labml
+labml_helpers
+tensorflow
+torchvision
+altair

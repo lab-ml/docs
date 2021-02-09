@@ -1,6 +1,9 @@
 sphinx-help: ## Sphinx help
 	@sphinx-build -M help source build
 
+prepare: ## Prepare environment for build
+	@pip install -r requirements.txt
+
 build: ## Build docs
 	@sphinx-build -M html source build
 
@@ -20,5 +23,5 @@ pages: rebuild ## Create pages
 help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-.PHONY: build clean help sphinx-help pages rebuild
+.PHONY: build clean help sphinx-help pages rebuild prepare
 .DEFAULT_GOAL := help
