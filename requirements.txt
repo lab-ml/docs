@@ -1,6 +1,7 @@
 Sphinx
 sphinx-rtd-theme
 sphinxcontrib-katex
+sphinx-sitemap
 labml
 labml_helpers
 tensorflow

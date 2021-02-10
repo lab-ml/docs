@@ -39,6 +39,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinxcontrib.katex',
     'sphinx.ext.autosectionlabel',
+    'sphinx_sitemap',
 ]
 
 # autosectionlabel throws warnings if section names are duplicated.
@@ -88,8 +89,8 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_theme_options = {
     # 'pytorch_project': '',
-    'analytics_id': 'UA-164228270-1',
-    'canonical_url': 'https://lab-ml.com/',
+    # 'analytics_id': 'UA-164228270-1',
+    'canonical_url': 'https://docs.labml.ai/',
     'collapse_navigation': False,
     'display_version': True,
     # 'logo_only': True,
@@ -104,6 +105,9 @@ html_favicon = '_static/img/lab_icon.png'
 html_static_path = ['_static']
 
 master_doc = 'index'
+
+# To automatically generate a sitemap
+html_baseurl = 'https://docs.labml.ai/'
 
 
 # Called automatically by Sphinx, making this `conf.py` an "extension".
