@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://docs.labml.ai/index.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/installation_setup.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/logger.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/monitor.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/configs.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/tracker.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/experiment.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/guide/analytics.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/lab.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/configs.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/experiment.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/logger.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/monit.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/tracker.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/utils.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/helpers.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/analytics.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/api/manage.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/index.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/lab.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/configs.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/experiment.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/logger.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/internal/util/colors.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/monit.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/tracker.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/utils/pytorch.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/training_loop.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/device.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/seed.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/train_valid.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/datasets/mnist.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml_helpers/datasets/cifar10.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/analytics.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/labml/manage.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.labml.ai/_modules/index.html</loc>
+  <lastmod>2020-12-07T16:30:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+</urlset>
