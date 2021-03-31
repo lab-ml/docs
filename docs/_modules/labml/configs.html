@@ -240,6 +240,7 @@
 
 <span class="kn">from</span> <span class="nn">labml.internal.configs.base</span> <span class="kn">import</span> <span class="n">Configs</span> <span class="k">as</span> <span class="n">_Configs</span>
 <span class="kn">from</span> <span class="nn">labml.internal.configs.config_item</span> <span class="kn">import</span> <span class="n">ConfigItem</span>
+<span class="kn">from</span> <span class="nn">labml.internal.configs.dynamic_hyperparam</span> <span class="kn">import</span> <span class="n">FloatDynamicHyperParam</span><span class="p">,</span> <span class="n">IntDynamicHyperParam</span>
 <span class="kn">from</span> <span class="nn">labml.utils.errors</span> <span class="kn">import</span> <span class="n">ConfigsError</span>
 
 
@@ -454,6 +455,12 @@
         <span class="k">raise</span> <span class="n">ConfigsError</span><span class="p">(</span><span class="s1">&#39;You need to pass config item to aggregate&#39;</span><span class="p">)</span>
 
     <span class="n">config_class</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">option_name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="n">option</span><span class="p">,</span> <span class="n">calculate</span><span class="p">,</span> <span class="n">hyperparams</span><span class="p">,</span> <span class="n">meta_config</span><span class="p">,</span> <span class="n">aggregate</span><span class="p">,</span>
+           <span class="n">BaseConfigs</span><span class="p">,</span>
+           <span class="n">IntDynamicHyperParam</span><span class="p">,</span> <span class="n">FloatDynamicHyperParam</span><span class="p">,</span>
+           <span class="p">]</span>
 </pre></div>
 
            </div>
