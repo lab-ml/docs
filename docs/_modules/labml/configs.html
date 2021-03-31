@@ -2,47 +2,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>labml.configs &mdash; LabML 0.4 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/katex-math.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../../_static/lab_icon.png"/>
   
+  
+  
+    <link rel="canonical" href="https://docs.labml.ai/_modules/labml/configs.html"/>
+  
 
   
-  
-
-  
-    <link rel="canonical" href="https://docs.labml.ai/_modules/labml/configs.html" />
-
-  
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -92,7 +90,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -175,7 +172,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -210,13 +206,11 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
@@ -240,6 +234,8 @@
 
 <span class="kn">from</span> <span class="nn">labml.internal.configs.base</span> <span class="kn">import</span> <span class="n">Configs</span> <span class="k">as</span> <span class="n">_Configs</span>
 <span class="kn">from</span> <span class="nn">labml.internal.configs.config_item</span> <span class="kn">import</span> <span class="n">ConfigItem</span>
+<span class="kn">from</span> <span class="nn">labml.internal.configs.dynamic_hyperparam</span> <span class="kn">import</span> <span class="n">DynamicHyperParam</span><span class="p">,</span> \
+    <span class="n">FloatDynamicHyperParam</span><span class="p">,</span> <span class="n">IntDynamicHyperParam</span>
 <span class="kn">from</span> <span class="nn">labml.utils.errors</span> <span class="kn">import</span> <span class="n">ConfigsError</span>
 
 
@@ -454,31 +450,33 @@
         <span class="k">raise</span> <span class="n">ConfigsError</span><span class="p">(</span><span class="s1">&#39;You need to pass config item to aggregate&#39;</span><span class="p">)</span>
 
     <span class="n">config_class</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">option_name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="n">option</span><span class="p">,</span> <span class="n">calculate</span><span class="p">,</span> <span class="n">hyperparams</span><span class="p">,</span> <span class="n">meta_config</span><span class="p">,</span> <span class="n">aggregate</span><span class="p">,</span>
+           <span class="n">BaseConfigs</span><span class="p">,</span>
+           <span class="n">DynamicHyperParam</span><span class="p">,</span>
+           <span class="n">IntDynamicHyperParam</span><span class="p">,</span> <span class="n">FloatDynamicHyperParam</span><span class="p">,</span>
+           <span class="p">]</span>
 </pre></div>
 
            </div>
            
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Lab contributors.
+        &copy; Copyright 2020, Lab contributors
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -486,6 +484,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

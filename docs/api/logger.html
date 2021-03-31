@@ -2,47 +2,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Logger &mdash; LabML 0.4 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/lab_icon.png"/>
   
+  
+  
+    <link rel="canonical" href="https://docs.labml.ai/api/logger.html"/>
+  
 
   
-  
-
-  
-    <link rel="canonical" href="https://docs.labml.ai/api/logger.html" />
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Monitor" href="monit.html" />
@@ -94,7 +92,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -177,7 +174,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -212,20 +208,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Logger</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/api/logger.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -243,41 +237,31 @@
 <span id="logger"></span><h1>Logger<a class="headerlink" href="#module-labml.logger" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="labml.logger.log">
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.log" title="Permalink to this definition">¶</a></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_reset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">labml.internal.util.colors.StyleCode</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_reset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">labml.internal.util.colors.StyleCode</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_reset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">labml.internal.util.colors.StyleCode</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_reset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">labml.internal.util.colors.StyleCode</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_reset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'True'</span></span></em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_reset</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.log" title="Permalink to this definition">¶</a></dt>
 <dd><p>This has multiple overloads</p>
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#labml.logger.StyleCode" title="labml.logger.StyleCode"><span class="pre">StyleCode</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">StyleCode</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#labml.logger.StyleCode" title="labml.logger.StyleCode"><span class="pre">StyleCode</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">colors</span><span class="p">:</span> <span class="n">List<span class="p">[</span>StyleCode<span class="p">]</span></span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#labml.logger.StyleCode" title="labml.logger.StyleCode"><span class="pre">StyleCode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">messages</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>StyleCode<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">log</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#labml.logger.StyleCode" title="labml.logger.StyleCode"><span class="pre">StyleCode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_new_line</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>StyleCode<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">is_new_line</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#log"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="field-list simple">
@@ -306,188 +290,182 @@ Each element should be either a string or a tuple of string and styles.</p></li>
 
 <dl class="py function">
 <dt id="labml.logger.inspect">
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.inspect" title="Permalink to this definition">¶</a></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.inspect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pretty prints a set of values.</p>
 <p>This has multiple overloads</p>
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span><span class="p">:</span> <span class="n">List</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">inspect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">items</span><span class="p">:</span> <span class="n">any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#inspect"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="labml.logger.Text">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">Text</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#Text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.Text" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">Text</code><a class="reference internal" href="../_modules/labml/logger.html#Text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.Text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Standard styles we use in labml</p>
 <dl class="py attribute">
 <dt id="labml.logger.Text.danger">
-<code class="sig-name descname"><span class="pre">danger</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'red'</span></em><a class="headerlink" href="#labml.logger.Text.danger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">danger</code><em class="property"> = 'red'</em><a class="headerlink" href="#labml.logger.Text.danger" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.heading">
-<code class="sig-name descname"><span class="pre">heading</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'underline'</span></em><a class="headerlink" href="#labml.logger.Text.heading" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">heading</code><em class="property"> = 'underline'</em><a class="headerlink" href="#labml.logger.Text.heading" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.highlight">
-<code class="sig-name descname"><span class="pre">highlight</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['bold',</span> <span class="pre">'orange']</span></em><a class="headerlink" href="#labml.logger.Text.highlight" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">highlight</code><em class="property"> = ['bold', 'orange']</em><a class="headerlink" href="#labml.logger.Text.highlight" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.key">
-<code class="sig-name descname"><span class="pre">key</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'cyan'</span></em><a class="headerlink" href="#labml.logger.Text.key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key</code><em class="property"> = 'cyan'</em><a class="headerlink" href="#labml.logger.Text.key" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.link">
-<code class="sig-name descname"><span class="pre">link</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'link'</span></em><a class="headerlink" href="#labml.logger.Text.link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">link</code><em class="property"> = 'link'</em><a class="headerlink" href="#labml.logger.Text.link" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.meta">
-<code class="sig-name descname"><span class="pre">meta</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'blue'</span></em><a class="headerlink" href="#labml.logger.Text.meta" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">meta</code><em class="property"> = 'blue'</em><a class="headerlink" href="#labml.logger.Text.meta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.meta2">
-<code class="sig-name descname"><span class="pre">meta2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'purple'</span></em><a class="headerlink" href="#labml.logger.Text.meta2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">meta2</code><em class="property"> = 'purple'</em><a class="headerlink" href="#labml.logger.Text.meta2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.none">
-<code class="sig-name descname"><span class="pre">none</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#labml.logger.Text.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = None</em><a class="headerlink" href="#labml.logger.Text.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.subtle">
-<code class="sig-name descname"><span class="pre">subtle</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['light',</span> <span class="pre">'white']</span></em><a class="headerlink" href="#labml.logger.Text.subtle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subtle</code><em class="property"> = ['light', 'white']</em><a class="headerlink" href="#labml.logger.Text.subtle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.success">
-<code class="sig-name descname"><span class="pre">success</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'green'</span></em><a class="headerlink" href="#labml.logger.Text.success" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">success</code><em class="property"> = 'green'</em><a class="headerlink" href="#labml.logger.Text.success" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.title">
-<code class="sig-name descname"><span class="pre">title</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['bold',</span> <span class="pre">'underline']</span></em><a class="headerlink" href="#labml.logger.Text.title" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">title</code><em class="property"> = ['bold', 'underline']</em><a class="headerlink" href="#labml.logger.Text.title" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.value">
-<code class="sig-name descname"><span class="pre">value</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'bold'</span></em><a class="headerlink" href="#labml.logger.Text.value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">value</code><em class="property"> = 'bold'</em><a class="headerlink" href="#labml.logger.Text.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Text.warning">
-<code class="sig-name descname"><span class="pre">warning</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'orange'</span></em><a class="headerlink" href="#labml.logger.Text.warning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">warning</code><em class="property"> = 'orange'</em><a class="headerlink" href="#labml.logger.Text.warning" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="labml.logger.Style">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">Style</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#Style"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.Style" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">Style</code><a class="reference internal" href="../_modules/labml/logger.html#Style"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.Style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output styles</p>
 <dl class="py attribute">
 <dt id="labml.logger.Style.bold">
-<code class="sig-name descname"><span class="pre">bold</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'bold'</span></em><a class="headerlink" href="#labml.logger.Style.bold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bold</code><em class="property"> = 'bold'</em><a class="headerlink" href="#labml.logger.Style.bold" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Style.light">
-<code class="sig-name descname"><span class="pre">light</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'light'</span></em><a class="headerlink" href="#labml.logger.Style.light" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">light</code><em class="property"> = 'light'</em><a class="headerlink" href="#labml.logger.Style.light" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Style.none">
-<code class="sig-name descname"><span class="pre">none</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#labml.logger.Style.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = None</em><a class="headerlink" href="#labml.logger.Style.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Style.normal">
-<code class="sig-name descname"><span class="pre">normal</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'normal'</span></em><a class="headerlink" href="#labml.logger.Style.normal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">normal</code><em class="property"> = 'normal'</em><a class="headerlink" href="#labml.logger.Style.normal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Style.underline">
-<code class="sig-name descname"><span class="pre">underline</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'underline'</span></em><a class="headerlink" href="#labml.logger.Style.underline" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">underline</code><em class="property"> = 'underline'</em><a class="headerlink" href="#labml.logger.Style.underline" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="labml.logger.Color">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">Color</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/logger.html#Color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.Color" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">Color</code><a class="reference internal" href="../_modules/labml/logger.html#Color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.Color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output colors</p>
 <dl class="py attribute">
 <dt id="labml.logger.Color.black">
-<code class="sig-name descname"><span class="pre">black</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'black'</span></em><a class="headerlink" href="#labml.logger.Color.black" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">black</code><em class="property"> = 'black'</em><a class="headerlink" href="#labml.logger.Color.black" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.blue">
-<code class="sig-name descname"><span class="pre">blue</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'blue'</span></em><a class="headerlink" href="#labml.logger.Color.blue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">blue</code><em class="property"> = 'blue'</em><a class="headerlink" href="#labml.logger.Color.blue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.cyan">
-<code class="sig-name descname"><span class="pre">cyan</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'cyan'</span></em><a class="headerlink" href="#labml.logger.Color.cyan" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cyan</code><em class="property"> = 'cyan'</em><a class="headerlink" href="#labml.logger.Color.cyan" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.green">
-<code class="sig-name descname"><span class="pre">green</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'green'</span></em><a class="headerlink" href="#labml.logger.Color.green" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">green</code><em class="property"> = 'green'</em><a class="headerlink" href="#labml.logger.Color.green" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.none">
-<code class="sig-name descname"><span class="pre">none</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#labml.logger.Color.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = None</em><a class="headerlink" href="#labml.logger.Color.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.orange">
-<code class="sig-name descname"><span class="pre">orange</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'orange'</span></em><a class="headerlink" href="#labml.logger.Color.orange" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">orange</code><em class="property"> = 'orange'</em><a class="headerlink" href="#labml.logger.Color.orange" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.purple">
-<code class="sig-name descname"><span class="pre">purple</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'purple'</span></em><a class="headerlink" href="#labml.logger.Color.purple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">purple</code><em class="property"> = 'purple'</em><a class="headerlink" href="#labml.logger.Color.purple" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.red">
-<code class="sig-name descname"><span class="pre">red</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'red'</span></em><a class="headerlink" href="#labml.logger.Color.red" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">red</code><em class="property"> = 'red'</em><a class="headerlink" href="#labml.logger.Color.red" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="labml.logger.Color.white">
-<code class="sig-name descname"><span class="pre">white</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'white'</span></em><a class="headerlink" href="#labml.logger.Color.white" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">white</code><em class="property"> = 'white'</em><a class="headerlink" href="#labml.logger.Color.white" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="labml.logger.StyleCode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml.logger.</span></code><code class="sig-name descname"><span class="pre">StyleCode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/internal/util/colors.html#StyleCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.logger.StyleCode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml.logger.</code><code class="sig-name descname">StyleCode</code><a class="reference internal" href="../_modules/labml/internal/util/colors.html#StyleCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.logger.StyleCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the base class for different style enumerations</p>
 </dd></dl>
 
@@ -498,29 +476,29 @@ Each element should be either a string or a tuple of string and styles.</p></li>
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="monit.html" class="btn btn-neutral float-right" title="Monitor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="experiment.html" class="btn btn-neutral float-left" title="Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="monit.html" class="btn btn-neutral float-right" title="Monitor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="experiment.html" class="btn btn-neutral float-left" title="Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Lab contributors.
+        &copy; Copyright 2020, Lab contributors
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -528,6 +506,7 @@ Each element should be either a string or a tuple of string and styles.</p></li>
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

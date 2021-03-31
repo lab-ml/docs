@@ -2,47 +2,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Configs &mdash; LabML 0.4 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/lab_icon.png"/>
   
+  
+  
+    <link rel="canonical" href="https://docs.labml.ai/api/configs.html"/>
+  
 
   
-  
-
-  
-    <link rel="canonical" href="https://docs.labml.ai/api/configs.html" />
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Experiment" href="experiment.html" />
@@ -94,7 +92,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -177,7 +174,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -212,20 +208,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Configs</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/api/configs.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -243,39 +237,33 @@
 <span id="configs"></span><h1>Configs<a class="headerlink" href="#module-labml.configs" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="labml.configs.BaseConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">BaseConfigs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#BaseConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.BaseConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">BaseConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#BaseConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.BaseConfigs" title="Permalink to this definition">¶</a></dt>
 <dd><p>You should sub-class this class to create your own configurations</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="labml.configs.option">
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.option" title="Permalink to this definition">¶</a></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.option" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this as a decorator to register configuration options.</p>
 <p>This has multiple overloads</p>
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_item</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config_item</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_item</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config_item</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">option_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_item</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config_item</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">pass_params</span><span class="p">:</span> <span class="n">List<span class="p">[</span>any<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_item</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config_item</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">option_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">pass_params</span><span class="p">:</span> <span class="n">List<span class="p">[</span>any<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#option"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="field-list simple">
@@ -298,33 +286,27 @@ will be passed to the function</p></li>
 
 <dl class="py function">
 <dt id="labml.configs.calculate">
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.calculate" title="Permalink to this definition">¶</a></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">any</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">any</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this to register configuration options.</p>
 <p>This has multiple overloads</p>
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">option_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">pass_params</span><span class="p">:</span> <span class="n">List<span class="p">[</span>any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt>
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>any<span class="p">, </span>List<span class="p">[</span>any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">option_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">pass_params</span><span class="p">:</span> <span class="n">List<span class="p">[</span>any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#calculate"><span class="viewcode-link">[source]</span></a></dt>
 <dd></dd></dl>
 
 <dl class="field-list simple">
@@ -348,7 +330,7 @@ will be passed to the function</p></li>
 
 <dl class="py function">
 <dt id="labml.configs.hyperparams">
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">hyperparams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_hyperparam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#hyperparams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.hyperparams" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">any</span></em>, <em class="sig-param"><span class="n">is_hyperparam</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#hyperparams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.hyperparams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifies configuration as (or not) hyper-parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -363,7 +345,7 @@ items are hyper-parameters. Defaults to <code class="docutils literal notranslat
 
 <dl class="py function">
 <dt id="labml.configs.meta_config">
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">meta_config</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#meta_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.meta_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">meta_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">any</span></em>, <em class="sig-param"><span class="n">is_meta</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#meta_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.meta_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifies configuration as meta parameter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -378,7 +360,7 @@ items are meta. Defaults to <code class="docutils literal notranslate"><span cla
 
 <dl class="py function">
 <dt id="labml.configs.aggregate">
-<code class="sig-prename descclassname"><span class="pre">labml.configs.</span></code><code class="sig-name descname"><span class="pre">aggregate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">any</span><span class="p"><span class="pre">,</span> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml.configs.aggregate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">aggregate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">any</span></em>, <em class="sig-param"><span class="n">option_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>any<span class="p">, </span>any<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/configs.html#aggregate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.aggregate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aggregate configs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -391,6 +373,46 @@ items are meta. Defaults to <code class="docutils literal notranslate"><span cla
 </dl>
 </dd></dl>
 
+<dl class="py class">
+<dt id="labml.configs.DynamicHyperParam">
+<em class="property">class </em><code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">DynamicHyperParam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">type_</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">range_</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/internal/configs/dynamic_hyperparam.html#DynamicHyperParam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.DynamicHyperParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamic hyper-parameters can be changed manually on <cite>labml.ai app &lt;https://labml.ai&gt;</cite>
+while the models are training.
+There are designed as an alternative to hyper-parameter schedules like gradually decreasing
+learning rate as the training progresses. Dynamic hyper-parameters let users change
+the values based on training metrics instead of sticking to a pre-determined schedule.</p>
+<p>This is the base class that is extended by specific dynamic hyper-parameter types.
+You should use those.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="labml.configs.FloatDynamicHyperParam">
+<em class="property">class </em><code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">FloatDynamicHyperParam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">range_</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0, 1</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/internal/configs/dynamic_hyperparam.html#FloatDynamicHyperParam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.FloatDynamicHyperParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this for for floating-point values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default</strong> (<em>float</em>) – default value of the hyper-parameter</p></li>
+<li><p><strong>range_</strong> (<em>Tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em>) – the value range for the hyper-parameter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="labml.configs.IntDynamicHyperParam">
+<em class="property">class </em><code class="sig-prename descclassname">labml.configs.</code><code class="sig-name descname">IntDynamicHyperParam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">range_</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">1, 16</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml/internal/configs/dynamic_hyperparam.html#IntDynamicHyperParam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml.configs.IntDynamicHyperParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this for for integer values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default</strong> (<em>int</em>) – default value of the hyper-parameter</p></li>
+<li><p><strong>range_</strong> (<em>Tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em>) – the value range for the hyper-parameter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -398,29 +420,29 @@ items are meta. Defaults to <code class="docutils literal notranslate"><span cla
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="experiment.html" class="btn btn-neutral float-right" title="Experiment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="lab.html" class="btn btn-neutral float-left" title="Lab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="experiment.html" class="btn btn-neutral float-right" title="Experiment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lab.html" class="btn btn-neutral float-left" title="Lab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Lab contributors.
+        &copy; Copyright 2020, Lab contributors
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -428,6 +450,7 @@ items are meta. Defaults to <code class="docutils literal notranslate"><span cla
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

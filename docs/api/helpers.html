@@ -2,47 +2,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Helpers &mdash; LabML 0.4 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/lab_icon.png"/>
   
+  
+  
+    <link rel="canonical" href="https://docs.labml.ai/api/helpers.html"/>
+  
 
   
-  
-
-  
-    <link rel="canonical" href="https://docs.labml.ai/api/helpers.html" />
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Analytics" href="analytics.html" />
@@ -94,7 +92,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -177,7 +174,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -212,20 +208,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Helpers</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/api/helpers.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -251,34 +245,34 @@
 <span id="modules"></span><h2>Modules<a class="headerlink" href="#module-labml_helpers.training_loop" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="labml_helpers.training_loop.TrainingLoopConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.training_loop.</span></code><code class="sig-name descname"><span class="pre">TrainingLoopConfigs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/training_loop.html#TrainingLoopConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.training_loop.TrainingLoopConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.training_loop.</code><code class="sig-name descname">TrainingLoopConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/training_loop.html#TrainingLoopConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.training_loop.TrainingLoopConfigs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <span class="target" id="module-labml_helpers.device"></span><dl class="py class">
 <dt id="labml_helpers.device.DeviceConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.device.</span></code><code class="sig-name descname"><span class="pre">DeviceConfigs</span></code><a class="reference internal" href="../_modules/labml_helpers/device.html#DeviceConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.device.DeviceConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.device.</code><code class="sig-name descname">DeviceConfigs</code><a class="reference internal" href="../_modules/labml_helpers/device.html#DeviceConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.device.DeviceConfigs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <span class="target" id="module-labml_helpers.seed"></span><dl class="py class">
 <dt id="labml_helpers.seed.SeedConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.seed.</span></code><code class="sig-name descname"><span class="pre">SeedConfigs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/seed.html#SeedConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.seed.SeedConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.seed.</code><code class="sig-name descname">SeedConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/seed.html#SeedConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.seed.SeedConfigs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <span class="target" id="module-labml_helpers.train_valid"></span><dl class="py class">
 <dt id="labml_helpers.train_valid.TrainValidConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.train_valid.</span></code><code class="sig-name descname"><span class="pre">TrainValidConfigs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/train_valid.html#TrainValidConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.train_valid.TrainValidConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.train_valid.</code><code class="sig-name descname">TrainValidConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/train_valid.html#TrainValidConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.train_valid.TrainValidConfigs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <div class="section" id="module-labml_helpers.datasets.mnist">
 <span id="datasets"></span><h3>Datasets<a class="headerlink" href="#module-labml_helpers.datasets.mnist" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="labml_helpers.datasets.mnist.MNISTConfigs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.datasets.mnist.</span></code><code class="sig-name descname"><span class="pre">MNISTConfigs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/datasets/mnist.html#MNISTConfigs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.datasets.mnist.MNISTConfigs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.datasets.mnist.</code><code class="sig-name descname">MNISTConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/datasets/mnist.html#MNISTConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.datasets.mnist.MNISTConfigs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <span class="target" id="module-labml_helpers.datasets.cifar10"></span><dl class="py class">
 <dt id="labml_helpers.datasets.cifar10.CIFAR10Configs">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">labml_helpers.datasets.cifar10.</span></code><code class="sig-name descname"><span class="pre">CIFAR10Configs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_primary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/datasets/cifar10.html#CIFAR10Configs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#labml_helpers.datasets.cifar10.CIFAR10Configs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">labml_helpers.datasets.cifar10.</code><code class="sig-name descname">CIFAR10Configs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">_primary</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/labml_helpers/datasets/cifar10.html#CIFAR10Configs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#labml_helpers.datasets.cifar10.CIFAR10Configs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -290,29 +284,29 @@
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="analytics.html" class="btn btn-neutral float-right" title="Analytics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="utils.html" class="btn btn-neutral float-left" title="Utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="analytics.html" class="btn btn-neutral float-right" title="Analytics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utils.html" class="btn btn-neutral float-left" title="Utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Lab contributors.
+        &copy; Copyright 2020, Lab contributors
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -320,6 +314,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {
