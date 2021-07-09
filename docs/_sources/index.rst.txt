@@ -1,18 +1,18 @@
-:github_url: https://github.com/lab-ml/labml
+:github_url: https://github.com/labmlai/labml
 
-.. include:: lab.rst
+.. image:: https://img.shields.io/github/stars/labmlai/labml?style=social
+   :target: https://github.com/labmlai/labml
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Guide
+.. image:: https://img.shields.io/twitter/follow/labmlai?style=social
+    :target: https://twitter.com/labmlai?ref_src=twsrc%5Etfw
 
-   guide/installation_setup
-   guide/logger
-   guide/monitor
-   guide/configs
-   guide/tracker
-   guide/experiment
-   guide/analytics
+.. raw:: html
+
+    <p></p>
+
+This is the Python API reference.
+Visit the `Github Repo <https://github.com/labmlai/labml>`_ for an overview
+and tutorials.
 
 .. toctree::
    :maxdepth: 1
@@ -28,12 +28,5 @@
    api/helpers
    api/analytics
    api/manage
-
-.. toctree::
-   :maxdepth: 1
-   :name: Links
-   :caption: Links
-
-   🧠 LabML NN: A collection of PyTorch implementations of neural network architectures and layers. <https://lab-ml.com/labml_nn/index.html>
 
 

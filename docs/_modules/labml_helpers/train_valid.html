@@ -97,54 +97,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/installation_setup.html">Installation &amp; Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/installation_setup.html#lab">Lab</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../guide/installation_setup.html#create-labml-yaml-file">Create <code class="docutils literal notranslate"><span class="pre">.labml.yaml</span></code> file</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/installation_setup.html#dashboard">Dashboard</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/logger.html">Logger</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/logger.html#logging-with-colors">Logging with colors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/logger.html#logging-debug-info">Logging debug info</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/monitor.html">Monitor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/monitor.html#iterators-enumerators">Iterators &amp; Enumerators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/monitor.html#sections">Sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/monitor.html#loop">Loop</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/configs.html">Configs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#define-a-configuration-class">Define a configuration class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#calculated-configurations">Calculated configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#inheriting-and-re-using-configuration-classes">Inheriting and re-using configuration classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#defining-configurations-options">Defining configurations options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#calculating-with-predefined-functions-of-lambdas">Calculating with predefined functions of lambdas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#aggregates">Aggregates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#hyper-parameters">Hyper-parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/configs.html#running-the-experiment">Running the experiment</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/tracker.html">Tracker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/tracker.html#indicator-settings">Indicator settings</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/experiment.html">Experiment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/analytics.html">Analytics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#load-runs">Load runs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#distribution-plot">Distribution plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#scatter-plot">Scatter plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#loading-artifacts">Loading artifacts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#histogram">Histogram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/analytics.html#binned-heatmap">Binned heatmap</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Python API</span></p>
+              <p class="caption"><span class="caption-text">Python API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api/lab.html">Lab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/configs.html">Configs</a></li>
@@ -163,10 +116,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/analytics.html">Analytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/manage.html">Manage</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Links</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference external" href="https://lab-ml.com/labml_nn/index.html">🧠 LabML NN: A collection of PyTorch implementations of neural network architectures and layers.</a></li>
 </ul>
 
             
@@ -345,13 +294,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">step</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span> <span class="o">=</span> <span class="n">data_loader</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state_modules</span> <span class="o">=</span> <span class="n">state_modules</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__states</span> <span class="o">=</span> <span class="p">[</span><span class="n">sm</span><span class="o">.</span><span class="n">create_state</span><span class="p">()</span> <span class="k">for</span> <span class="n">sm</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_modules</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span> <span class="o">=</span> <span class="n">BatchIndex</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_loader</span><span class="p">),</span> <span class="n">inner_iterations</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inner_iterations</span> <span class="o">=</span> <span class="n">inner_iterations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span> <span class="o">=</span> <span class="n">data_loader</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span> <span class="o">=</span> <span class="n">BatchIndex</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_iterations</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">set_data_loader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span> <span class="o">=</span> <span class="n">data_loader</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span> <span class="o">=</span> <span class="n">BatchIndex</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_loader</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_iterations</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -360,7 +312,7 @@
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span><span class="o">.</span><span class="n">completed</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_batch_index</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_loader</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_iterations</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">sm</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_modules</span><span class="p">:</span>
                 <span class="n">sm</span><span class="o">.</span><span class="n">on_epoch_start</span><span class="p">()</span>
         <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">set_grad_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">is_train</span><span class="p">):</span>
@@ -426,7 +378,9 @@
     <span class="k">def</span> <span class="nf">step_inner</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">total_iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="n">total</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total_iterations</span> <span class="o">=</span> <span class="n">total_iterations</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
 
